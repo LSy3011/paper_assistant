@@ -1,0 +1,3646 @@
+{
+  "doc-e4a8349a158e75492141b2c564253c34": {
+    "relation_pairs": [
+      [
+        "PolyBench Benchmark",
+        "SODA-OPT"
+      ],
+      [
+        "High-Level Productive Programming Frameworks",
+        "SODA-OPT"
+      ],
+      [
+        "High-Level Synthesis",
+        "SODA-OPT"
+      ],
+      [
+        "Cheng Tan",
+        "SODA-OPT"
+      ],
+      [
+        "MLIR",
+        "SODA-OPT"
+      ],
+      [
+        "Nicolas Bohm Agostini",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "Serena Curzel"
+      ],
+      [
+        "Custom Hardware Accelerators",
+        "SODA-OPT"
+      ],
+      [
+        "Antonino Tumeo",
+        "SODA-OPT"
+      ],
+      [
+        "PNNL",
+        "SODA-OPT"
+      ],
+      [
+        "Joseph Manzano",
+        "SODA-OPT"
+      ],
+      [
+        "Richland",
+        "SODA-OPT"
+      ],
+      [
+        "David Kaeli",
+        "SODA-OPT"
+      ],
+      [
+        "Marco Minutoli",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "Vito Giovanni Castellana"
+      ],
+      [
+        "SODA-OPT",
+        "Vinay Amatya"
+      ],
+      [
+        "Automatic Generation of Accelerators",
+        "SODA-OPT"
+      ]
+    ],
+    "count": 17,
+    "create_time": 1766312305,
+    "update_time": 1766312305,
+    "_id": "doc-e4a8349a158e75492141b2c564253c34"
+  },
+  "doc-20e7767383b36835d70908fa6e0ba88c": {
+    "relation_pairs": [
+      [
+        "HPVM2FPGA",
+        "SODA-OPT"
+      ],
+      [
+        "FroST",
+        "Halide"
+      ],
+      [
+        "GEMM4 Kernel",
+        "High-Level Optimization Pipeline"
+      ],
+      [
+        "Accelerator Memory",
+        "TiledCompute()"
+      ],
+      [
+        "EffectsOfSODAOPTonQoR",
+        "SODAOPT"
+      ],
+      [
+        "Defense Advanced Research Projects Agencys (DARPA) Real-Time Machine Learning (RTML) Program",
+        "PNNLs Laboratory Directed Research and Development (LDRD) Program"
+      ],
+      [
+        "Adel Ejjeh et al.",
+        "HPVM: Hardware-Agnostic Programming for Heterogeneous Parallel Systems"
+      ],
+      [
+        "HLS",
+        "MLIR"
+      ],
+      [
+        "SODA-OPT",
+        "symm"
+      ],
+      [
+        "Politecnico di Milano",
+        "Serena Curzel"
+      ],
+      [
+        "SODA-OPT",
+        "syrk"
+      ],
+      [
+        "ASIC Design",
+        "SODA-OPT Passes"
+      ],
+      [
+        "Jianyi Cheng",
+        "Ruizhe Zhao"
+      ],
+      [
+        "Facebook",
+        "PyTorch"
+      ],
+      [
+        "TensorFlow Protobuf File",
+        "tf-mlir-translate"
+      ],
+      [
+        "Cheng Tan",
+        "SODA-OPT"
+      ],
+      [
+        "Nicolas Bohm Agostini",
+        "SODA-OPT"
+      ],
+      [
+        "Deming Chen",
+        "Gengsheng Chen"
+      ],
+      [
+        "Bambu",
+        "Christian Pilato"
+      ],
+      [
+        "Data Model Convergence Initiative",
+        "Defense Advanced Research Projects Agencys (DARPA) Real-Time Machine Learning (RTML) Program"
+      ],
+      [
+        "HLS process",
+        "SODA-OPT optimizations"
+      ],
+      [
+        "Deming Chen",
+        "Leong, Magnus Jahre"
+      ],
+      [
+        "LLVM IR",
+        "Vitis HLS"
+      ],
+      [
+        "SODAOPT",
+        "VivadoHLSandVitisHLS"
+      ],
+      [
+        "HeteroCL",
+        "OpenCL"
+      ],
+      [
+        "SODA-OPT Approach",
+        "tf-opt"
+      ],
+      [
+        "LeNet",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "Serena Curzel"
+      ],
+      [
+        "Bambu",
+        "High-Level Synthesis"
+      ],
+      [
+        "HLS process",
+        "SODA-OPT pipeline"
+      ],
+      [
+        "Hot & Spicy",
+        "SODA-OPT"
+      ],
+      [
+        "MLIR",
+        "Phism"
+      ],
+      [
+        "createKrnlFuncWithArgs",
+        "replaceByFuncCall"
+      ],
+      [
+        "host MLIR file",
+        "kernel MLIR file"
+      ],
+      [
+        "Deming Chen",
+        "Wen-mei Hwu"
+      ],
+      [
+        "Hanchen Ye",
+        "Xiaofan Zhang"
+      ],
+      [
+        "Compute()",
+        "SODA-OPT"
+      ],
+      [
+        "PolyBench[22]artifact",
+        "SODAOPT"
+      ],
+      [
+        "Bohm Agostini",
+        "ICCAD"
+      ],
+      [
+        "SODA-OPT",
+        "atax"
+      ],
+      [
+        "DSE Engine",
+        "SODA-OPT Optimization Pipeline"
+      ],
+      [
+        "DSE engine",
+        "SODA-OPT pipeline"
+      ],
+      [
+        "PNNL",
+        "Vito Giovanni Castellana"
+      ],
+      [
+        "Hanchen Ye",
+        "Jianyi Cheng"
+      ],
+      [
+        "Deming Chen",
+        "Yonghua Lin"
+      ],
+      [
+        "Jinjun Xiong",
+        "Xiaofan Zhang"
+      ],
+      [
+        "affine dialect",
+        "scf dialect"
+      ],
+      [
+        "cloneIntoFunction",
+        "duplicateAndReplaceUse"
+      ],
+      [
+        "MobileNetV2",
+        "SODA-OPT"
+      ],
+      [
+        "Cheng Tan",
+        "PNNL"
+      ],
+      [
+        "Nicolas Bohm Agostini",
+        "PNNL"
+      ],
+      [
+        "Bambu",
+        "Michele Fiorito"
+      ],
+      [
+        "SODA-OPT",
+        "Speedup / LUTs Ratio"
+      ],
+      [
+        "PyTorch",
+        "[13]"
+      ],
+      [
+        "Deming Chen",
+        "Jinjun Xiong"
+      ],
+      [
+        "Joseph Manzano",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "gemm"
+      ],
+      [
+        "FPGA Target",
+        "SODA-OPT"
+      ],
+      [
+        "Compute()",
+        "TiledCompute()"
+      ],
+      [
+        "Bambu 0.9.7",
+        "Vitis HLS 2021.1"
+      ],
+      [
+        "Bambu",
+        "World Athletics Championship"
+      ],
+      [
+        "Jinjun Xiong",
+        "Yonghua Lin"
+      ],
+      [
+        "Hot & Spicy",
+        "Python"
+      ],
+      [
+        "Area-Time Tradeoff",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "bicg"
+      ],
+      [
+        "MLIR Inputs",
+        "SODA-OPT Analysis Passes"
+      ],
+      [
+        "Loop Tiling",
+        "SODA-OPT"
+      ],
+      [
+        "ScaleHLS",
+        "VitisHLS"
+      ],
+      [
+        "FPGA",
+        "SODA-OPT Passes"
+      ],
+      [
+        "Antonino Tumeo",
+        "PNNL"
+      ],
+      [
+        "Acceleration",
+        "SODAOPToutliningentirenetworkprovidesgreatestopportunityforadditionaloptimizationswith1.26xspeedupcomparedtotheoutliningofindividualoperations"
+      ],
+      [
+        "SODA-OPT",
+        "krnlFuncWithArgs()"
+      ],
+      [
+        "Bambu",
+        "SODAOPT"
+      ],
+      [
+        "CIRCT-HLS",
+        "CIRCT-HLS Developers"
+      ],
+      [
+        "Bambu",
+        "Marco Lattuada"
+      ],
+      [
+        "Hyunmin Jeong",
+        "Jianyi Cheng"
+      ],
+      [
+        "SODAOPT",
+        "VitisHLSartifact"
+      ],
+      [
+        "FreePDK 45nm",
+        "SODA-OPT"
+      ],
+      [
+        "Cong Hao",
+        "Deming Chen"
+      ],
+      [
+        "Data Model Convergence Initiative",
+        "Software Defined Accelerators for Data Analytics (SO(DA)2) Project"
+      ],
+      [
+        "SODA-OPT",
+        "doitgen"
+      ],
+      [
+        "Antonino Tumeo",
+        "SODA-OPT"
+      ],
+      [
+        "Bambu",
+        "Pietro Fezzardi"
+      ],
+      [
+        "SODA-OPT",
+        "gesummv"
+      ],
+      [
+        "C/C++",
+        "Phism"
+      ],
+      [
+        "Facebook",
+        "PyTorch: tensors and dynamic neural networks in Python with strong GPU acceleration"
+      ],
+      [
+        "SODA-OPT",
+        "three_mm"
+      ],
+      [
+        "Jack Huang",
+        "Jianyi Cheng"
+      ],
+      [
+        "Bambu",
+        "Serena Curzel"
+      ],
+      [
+        "Bambu",
+        "Marco Minutoli"
+      ],
+      [
+        "SODA-OPT",
+        "the increase in performance is higher than the increase in resource utilization, providing an intuitive method to evaluate the increase in QoR."
+      ],
+      [
+        "HeteroCL",
+        "SODA-OPT"
+      ],
+      [
+        "Bambu",
+        "[14]"
+      ],
+      [
+        "Deming Chen",
+        "Kees Vissers"
+      ],
+      [
+        "Joseph Manzano",
+        "PNNL"
+      ],
+      [
+        "CIRCT HLS",
+        "MLIR"
+      ],
+      [
+        "replaceByFuncCall",
+        "soda.launch region"
+      ],
+      [
+        "SODA-OPT",
+        "syr2k"
+      ],
+      [
+        "Bambuartifact",
+        "SODAOPT"
+      ],
+      [
+        "CIRCT-HLS",
+        "SODA-OPT"
+      ],
+      [
+        "outline passes",
+        "soda.launch"
+      ],
+      [
+        "cloneIntoFunction",
+        "createKrnlFuncWithArgs"
+      ],
+      [
+        "LUTs Ratio",
+        "SODA-OPT"
+      ],
+      [
+        "PolyBench",
+        "SODA-OPT"
+      ],
+      [
+        "Xiaofan Zhang",
+        "Yonghua Lin"
+      ],
+      [
+        "Jianyi Cheng",
+        "Yonghua Lin"
+      ],
+      [
+        "FROST",
+        "SODA-OPT"
+      ],
+      [
+        "GEMM8 Kernel",
+        "High-Level Optimization Pipeline"
+      ],
+      [
+        "ICCAD '22",
+        "SODA-OPT Work Presentation"
+      ],
+      [
+        "SODAOPTsearchandoutlinecapabilities",
+        "SearchandOutlineStrategies"
+      ],
+      [
+        "Junsong Wang",
+        "Xiaofan Zhang"
+      ],
+      [
+        "LeNetConvolutionalNeuralNetwork",
+        "TensorFlow"
+      ],
+      [
+        "Jianyi Cheng",
+        "Stephen Neuendorffer"
+      ],
+      [
+        "SODAOPT",
+        "searchandoutlinestrategies"
+      ],
+      [
+        "SODA-OPT",
+        "gemver"
+      ],
+      [
+        "Kernel Size",
+        "SODA-OPT"
+      ],
+      [
+        "FPGA",
+        "SODA-OPT"
+      ],
+      [
+        "Bambu",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "ScaleHLS"
+      ],
+      [
+        "MLIR Developers",
+        "SODA-OPT"
+      ],
+      [
+        "Bambu",
+        "Vito Giovanni Castellana"
+      ],
+      [
+        "SODAOPT",
+        "ScaleHLS26"
+      ],
+      [
+        "Clang -O2",
+        "SODA-OPT optimizations"
+      ],
+      [
+        "LeNetConvolutionalNeuralNetwork",
+        "SODAOPTsearchandoutlinecapabilities"
+      ],
+      [
+        "Bambu HLS Tool",
+        "LLVM IR"
+      ],
+      [
+        "SODA-OPT",
+        "Vinay Amatya"
+      ],
+      [
+        "Facebook",
+        "[13]"
+      ],
+      [
+        "SODAOPT",
+        "ScaleHLS[26]method"
+      ],
+      [
+        "MLIR",
+        "ScaleHLS"
+      ],
+      [
+        "California",
+        "United States"
+      ],
+      [
+        "HPVM2FPGA",
+        "HeteroC++"
+      ],
+      [
+        "SODA-OPT",
+        "two_mm"
+      ],
+      [
+        "LeNet",
+        "SODA-OPT Optimization Pipeline"
+      ],
+      [
+        "Antonio Tumeo",
+        "Bambu"
+      ],
+      [
+        "Bambu HLS compiler",
+        "C implementation"
+      ],
+      [
+        "SODA-OPT Compiler",
+        "Search Pattern Matching"
+      ],
+      [
+        "Soda.Launch",
+        "affine"
+      ],
+      [
+        "CIRCT-HLS",
+        "MLIR"
+      ],
+      [
+        "Deming Chen",
+        "Junsong Wang"
+      ],
+      [
+        "Marco Minutoli",
+        "PNNL"
+      ],
+      [
+        "SODA-OPT Passes",
+        "linalg Dialect, affine Dialect, scf Dialect"
+      ],
+      [
+        "HLS",
+        "SODA-OPT"
+      ],
+      [
+        "SODAOPT",
+        "VivadoHLSartifact"
+      ],
+      [
+        "PNNL",
+        "Vinay Amatya"
+      ],
+      [
+        "CIRCT Developers",
+        "Circuit IR Compilers and Tools"
+      ],
+      [
+        "MLIR Dialects",
+        "SODA-OPT"
+      ],
+      [
+        "High-Speed Biomedical Imaging and Spectroscopy III: Toward Big Data Instrumentation and Management (BiOS18)",
+        "T Goji Etoh et al."
+      ],
+      [
+        "SODA-OPT",
+        "mvt"
+      ],
+      [
+        "TensorFlow: A System for Large-Scale Machine Learning",
+        "USENIX symposium on operating systems design and implementation (OSDI16)"
+      ],
+      [
+        "Data Model Convergence Initiative",
+        "PNNLs Laboratory Directed Research and Development (LDRD) Program"
+      ],
+      [
+        "Marco Minutoli",
+        "SODA-OPT"
+      ],
+      [
+        "ResNet18,50",
+        "SODA-OPT"
+      ],
+      [
+        "ASIC",
+        "SODA-OPT"
+      ],
+      [
+        "Bambu",
+        "Fabrizio Ferrandi"
+      ],
+      [
+        "SearchandOutlineStrategies",
+        "Table4"
+      ],
+      [
+        "SODA-OPT optimization pipeline",
+        "optimization passes"
+      ],
+      [
+        "Host Program",
+        "SODA-OPT Passes"
+      ],
+      [
+        "Deming Chen",
+        "Xiaofan Zhang"
+      ],
+      [
+        "CIRCT",
+        "CIRCT Developers"
+      ],
+      [
+        "David Kaeli",
+        "Northeastern University"
+      ],
+      [
+        "SODA-OPT",
+        "Vito Giovanni Castellana"
+      ],
+      [
+        "constant values",
+        "memref descriptor"
+      ],
+      [
+        "Sensors 19, 4 (2019)",
+        "Yuan Cao et al."
+      ],
+      [
+        "MLIR",
+        "SODA-OPT"
+      ],
+      [
+        "SODA-OPT",
+        "Soda.Launch"
+      ],
+      [
+        "Deming Chen",
+        "Zhize Huang"
+      ],
+      [
+        "An MLIR-based Compiler Flow for System-Level Design and Hardware Acceleration",
+        "ICCAD 22"
+      ],
+      [
+        "Phism",
+        "SODA-OPT"
+      ]
+    ],
+    "count": 168,
+    "create_time": 1766313397,
+    "update_time": 1766313397,
+    "_id": "doc-20e7767383b36835d70908fa6e0ba88c"
+  },
+  "doc-d8c2ef81c740e3304bf0d2d4bd5aef53": {
+    "relation_pairs": [
+      [
+        "Architectural Implications for Inference of Graph Neural Networks on CGRA-based Accelerators",
+        "PRIME"
+      ],
+      [
+        "ML-CGRA",
+        "Open-Source Tiling/Data-Movement Passes"
+      ],
+      [
+        "ML-CGRA",
+        "Nicolas Bohm Agostini"
+      ],
+      [
+        "Instruction Level",
+        "ML-CGRA"
+      ],
+      [
+        "HASCO",
+        "Q. Xiao"
+      ],
+      [
+        "ML-CGRA",
+        "Yixuan Luo"
+      ],
+      [
+        "HASCO: Towards Agile hardware and software co-Design for Tensor Computation",
+        "Xu, P."
+      ],
+      [
+        "TVM",
+        "Timeloop"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "Florescu, S."
+      ],
+      [
+        "Mukkara, A.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "CGRA Tiles",
+        "King Mesh Topology"
+      ],
+      [
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation",
+        "Ying, V. A."
+      ],
+      [
+        "CGRAs",
+        "MAX Functional Units"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Liu, P."
+      ],
+      [
+        "J. Huang",
+        "ScaleHLS"
+      ],
+      [
+        "CGRAs",
+        "Coarse-Grained Reconfigurable Arrays (CGRAs)"
+      ],
+      [
+        "Convolution2023 60th ACM/IEEE Design Automation Conference (DAC)",
+        "TVM"
+      ],
+      [
+        "Conventional Compilation Flows",
+        "ML-CGRA"
+      ],
+      [
+        "Bao, H.",
+        "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-trained Transformers"
+      ],
+      [
+        "Cheng Tan",
+        "Microsoft"
+      ],
+      [
+        "CGRA Runtime Library",
+        "Cycle-Level Simulation"
+      ],
+      [
+        "DNNExplorer",
+        "ICCAD20"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Nowatzki, T."
+      ],
+      [
+        "Chen, Y.-H.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "University of Rochester",
+        "Yixuan Luo"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "Liu, T."
+      ],
+      [
+        "Application-Specific Integrated Circuit (ASIC)",
+        "CGRAs"
+      ],
+      [
+        "CGRA",
+        "Machine Learning-CGRA Framework"
+      ],
+      [
+        "High-Level Structures in Code",
+        "ML-CGRA"
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "Dupont, Y."
+      ],
+      [
+        "C. Hao",
+        "ScaleHLS"
+      ],
+      [
+        "ML-CGRA",
+        "efficient ML acceleration"
+      ],
+      [
+        "H. Jeong",
+        "ScaleHLS"
+      ],
+      [
+        "ML-CGRA",
+        "Nirav Dave"
+      ],
+      [
+        "A CGRA based neural network inference engine for deep reinforcement learning",
+        "Sun, J."
+      ],
+      [
+        "HybridDNN",
+        "X. Zhang"
+      ],
+      [
+        "Compiler Optimizations",
+        "ML-CGRA"
+      ],
+      [
+        "MLIR Infrastructure",
+        "Nicolas Bohm Agostini"
+      ],
+      [
+        "Initiation Interval (II)",
+        "Loop Boundary N"
+      ],
+      [
+        "CGRA Runtime Library",
+        "Control Memory"
+      ],
+      [
+        "CGRAs",
+        "General Purpose Processors (CPU/GPU)"
+      ],
+      [
+        "MLIR Infrastructure",
+        "Yixuan Luo"
+      ],
+      [
+        "Antonino Tumeo",
+        "ML-CGRA"
+      ],
+      [
+        "CGRAs",
+        "Input Buffers"
+      ],
+      [
+        "HASCO: Towards Agile hardware and software co-Design for Tensor Computation",
+        "Liang, Y."
+      ],
+      [
+        "Antonino Tumeo",
+        "MLIR Infrastructure"
+      ],
+      [
+        "Ang Li",
+        "Pacific Northwest National Laboratory"
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "Seddah, D."
+      ],
+      [
+        "Khailany, B.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "Accelerated Models",
+        "Fig. 6"
+      ],
+      [
+        "Raina, P.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "CGRA Runtime Library",
+        "King Mesh Topology"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "M. E. Papka"
+      ],
+      [
+        "Liu, S.",
+        "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "Su´arez, P. J. O."
+      ],
+      [
+        "Shao, Y. S.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "D. Chen",
+        "HybridDNN"
+      ],
+      [
+        "ACM/IEEE International Symposium on Computer Architecture (ISCA)",
+        "IEEE"
+      ],
+      [
+        "ML-CGRAs",
+        "Scalability Evaluation"
+      ],
+      [
+        "MLIR Infrastructure",
+        "Nicolas Bohm Agostini, Ang Li, Antonino Tumeo"
+      ],
+      [
+        "CGRA Runtime Library",
+        "DMA Unit"
+      ],
+      [
+        "CGRAs",
+        "Low-Level Instruction-Based Compiler Approaches"
+      ],
+      [
+        "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-trained Transformers",
+        "Zhou, M."
+      ],
+      [
+        "CGRAs",
+        "Timeloop"
+      ],
+      [
+        "High-Level ML Frameworks, Machine Learning Models",
+        "MLIR Infrastructure"
+      ],
+      [
+        "Cheng Tan",
+        "ML-CGRA"
+      ],
+      [
+        "CGRA Runtime Library",
+        "TVM Compiler Stack"
+      ],
+      [
+        "Cheng Tan",
+        "MLIR Infrastructure"
+      ],
+      [
+        "C. Lattner",
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "Double Buffering Technique",
+        "Speedup Analysis"
+      ],
+      [
+        "Lee, J.",
+        "NP-CGRA: Extending CGRAs for Efficient Processing of Light-weight Deep Neural Networks"
+      ],
+      [
+        "CamemBERT",
+        "Token Classification"
+      ],
+      [
+        "MLIR Infrastructure",
+        "Nirav Dave"
+      ],
+      [
+        "CGRAs",
+        "Systolic Array Configuration"
+      ],
+      [
+        "Architectural Implications for Inference of Graph Neural Networks on CGRA-based Accelerators",
+        "P. Nannipieri"
+      ],
+      [
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation",
+        "Venkatesan, R."
+      ],
+      [
+        "Machine Learning-CGRA Framework",
+        "Sentence-BERT"
+      ],
+      [
+        "Cohen, A.",
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "B. Wu",
+        "HASCO"
+      ],
+      [
+        "ML-CGRA",
+        "MLIR"
+      ],
+      [
+        "Linalg MLIR Dialect",
+        "Torch-MLIR"
+      ],
+      [
+        "Fan, X.",
+        "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+      ],
+      [
+        "CGRA Runtime Library",
+        "scratchpad memory blocks"
+      ],
+      [
+        "CGRA Runtime Library",
+        "TensorFlow"
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "de la Clergerie, ´E."
+      ],
+      [
+        "SODA-ULTRA Project",
+        "research project"
+      ],
+      [
+        "HASCO: Towards Agile hardware and software co-Design for Tensor Computation",
+        "Qian, X."
+      ],
+      [
+        "ML-CGRA",
+        "MLIR Infrastructure"
+      ],
+      [
+        "HybridDNN",
+        "J. Wang"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "Sujeeth, A."
+      ],
+      [
+        "HPCA22",
+        "ScaleHLS"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "Nama, A."
+      ],
+      [
+        "Different CGRAs",
+        "Fig. 7"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "Jairath, W."
+      ],
+      [
+        "CGRAs",
+        "Coarse-Grained Reconfigurable Array (CGRA)"
+      ],
+      [
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
+        "Shpeisman, T."
+      ],
+      [
+        "MLIR Infrastructure",
+        "Tong Geng"
+      ],
+      [
+        "HybridDNN",
+        "W.-M. Hwu"
+      ],
+      [
+        "Ang Li",
+        "ML-CGRA"
+      ],
+      [
+        "HASCO: Towards Agile hardware and software co-Design for Tensor Computation",
+        "Xiao, Q."
+      ],
+      [
+        "CGRAs",
+        "ML-CGRA"
+      ],
+      [
+        "University of Rochester",
+        "research project"
+      ],
+      [
+        "Ang Li",
+        "MLIR Infrastructure"
+      ],
+      [
+        "J. Cheng",
+        "ScaleHLS"
+      ],
+      [
+        "CGRA Runtime Library",
+        "CGRAs"
+      ],
+      [
+        "Keckler, S. W.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "Emer, J.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "Baseline Implementation",
+        "Cycle-Accurate CGRA Simulator"
+      ],
+      [
+        "D. Chen",
+        "ScaleHLS"
+      ],
+      [
+        "Bondhugula, A.",
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "A CGRA based neural network inference engine for deep reinforcement learning",
+        "Chen, Z."
+      ],
+      [
+        "J. Lee, J.",
+        "NP-CGRA: Extending CGRAs for Efficient Processing of Light-weight Deep Neural Networks"
+      ],
+      [
+        "IEEE Xplore",
+        "ML-CGRA"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Zhang, Z."
+      ],
+      [
+        "Architectural Implications for Inference of Graph Neural Networks on CGRA-based Accelerators",
+        "M. Monopoli"
+      ],
+      [
+        "ML-CGRA",
+        "Tong Geng"
+      ],
+      [
+        "CGRAs",
+        "Modern Deployments"
+      ],
+      [
+        "MLIR Infrastructure",
+        "ONNX"
+      ],
+      [
+        "Architectural Implications for Inference of Graph Neural Networks on CGRA-based Accelerators",
+        "L. Zulberti"
+      ],
+      [
+        "CGRA-Opt",
+        "Pattern Matching"
+      ],
+      [
+        "ML-CGRA",
+        "optimization passes"
+      ],
+      [
+        "ML-CGRA",
+        "U.S. Department of Energy Office of Science, Office of Advanced Scientific Computing Research"
+      ],
+      [
+        "CGRA",
+        "SODA-OPT"
+      ],
+      [
+        "Dadu, S.",
+        "Dsagen: Synthesizing programmable spatial accelerators"
+      ],
+      [
+        "ML-CGRA",
+        "Machine Learning (ML) Applications"
+      ],
+      [
+        "ML-CGRA",
+        "cgra-dialect"
+      ],
+      [
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
+        "Zinenko, O."
+      ],
+      [
+        "Beijing University of Post and Telecommunication",
+        "ML-CGRA"
+      ],
+      [
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
+        "Pienaar, J."
+      ],
+      [
+        "S. Neuendorffer",
+        "ScaleHLS"
+      ],
+      [
+        "SODA-OPT",
+        "TVM"
+      ],
+      [
+        "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-trained Transformers",
+        "Yang, N."
+      ],
+      [
+        "HASCO: Towards Agile hardware and software co-Design for Tensor Computation",
+        "Wu, B."
+      ],
+      [
+        "Image Classification",
+        "Vision Transformer"
+      ],
+      [
+        "DAC20",
+        "HybridDNN"
+      ],
+      [
+        "Machine Learning-CGRA Framework",
+        "Table I"
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "R. Stevens, L."
+      ],
+      [
+        "HASCO",
+        "Y. Liang"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Shah, V."
+      ],
+      [
+        "MLIR",
+        "TVM"
+      ],
+      [
+        "CGRA-Opt",
+        "Operation Fusion"
+      ],
+      [
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
+        "Vasilache, N."
+      ],
+      [
+        "CGRAs",
+        "Semantic Information"
+      ],
+      [
+        "CGRAs",
+        "Optimized Spatial Accelerator Configuration"
+      ],
+      [
+        "A CGRA based neural network inference engine for deep reinforcement learning",
+        "M. Liang, M."
+      ],
+      [
+        "CGRAs",
+        "HASCO"
+      ],
+      [
+        "H. Ye",
+        "ScaleHLS"
+      ],
+      [
+        "Luk, W.",
+        "Stream processing dual-track CGRA for object inference"
+      ],
+      [
+        "MLIR Infrastructure",
+        "Yixuan Luo, Cheng Tan, Nicolas Bohm Agostini, Ang Li, Antonino Tumeo, Nirav Dave, Tong Geng"
+      ],
+      [
+        "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "Wu, D."
+      ],
+      [
+        "CGRA Runtime Library",
+        "Crossbar"
+      ],
+      [
+        "HASCO",
+        "TVM"
+      ],
+      [
+        "CGRA Function Call",
+        "CGRA-Runner"
+      ],
+      [
+        "Double-Buffering Technique",
+        "Loop Tiling"
+      ],
+      [
+        "Stream processing dual-track CGRA for object inference",
+        "X. Fan, D."
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "Vishwanath"
+      ],
+      [
+        "HybridDNN",
+        "J. Xiong"
+      ],
+      [
+        "Davis, A.",
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "MLIR",
+        "SODA-OPT"
+      ],
+      [
+        "Machine Learning-CGRA Framework",
+        "Natural Language Processing"
+      ],
+      [
+        "CGRA Runtime Library",
+        "cycle-level simulation"
+      ],
+      [
+        "Stream processing dual-track CGRA for object inference",
+        "Wang, L."
+      ],
+      [
+        "M. Amini, U.",
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "CGRA Runtime Library",
+        "Register-Transfer Level (RTL) Simulation"
+      ],
+      [
+        "CGRAs",
+        "MAC Functional Units"
+      ],
+      [
+        "Deng, W.",
+        "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-trained Transformers"
+      ],
+      [
+        "Scale-HLS",
+        "TVM"
+      ],
+      [
+        "CGRAs",
+        "RA Template"
+      ],
+      [
+        "HASCO",
+        "X. Qian"
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "Sagot, B."
+      ],
+      [
+        "Initiation Interval (II)",
+        "RecMII (Recurrence Minimum II)"
+      ],
+      [
+        "Microsoft",
+        "Nirav Dave"
+      ],
+      [
+        "Software Defined Architectures for Portability and Performance (SODAPOP) Project",
+        "research project"
+      ],
+      [
+        "Attention Mechanism",
+        "Computer Vision and Natural Language Processing"
+      ],
+      [
+        "CGRAs, Dataflow Graph (DFG), Machine Learning Acceleration",
+        "MLIR Infrastructure"
+      ],
+      [
+        "HASCO",
+        "P. Xu"
+      ],
+      [
+        "SODA-OPT",
+        "Scale-HLS"
+      ],
+      [
+        "Nicolas Bohm Agostini",
+        "Pacific Northwest National Laboratory"
+      ],
+      [
+        "Baseline Implementation",
+        "Machine Learning-CGRA Framework"
+      ],
+      [
+        "Cao, W.",
+        "Stream processing dual-track CGRA for object inference"
+      ],
+      [
+        "ML-CGRA",
+        "open-source availability"
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "M¨uller, B."
+      ],
+      [
+        "Initiation Interval (II)",
+        "ResMII (Resource Minimum II)"
+      ],
+      [
+        "CGRA-Opt",
+        "Loop Tiling"
+      ],
+      [
+        "Heuristic Modulo Scheduling Algorithm",
+        "Initiation Interval (II)"
+      ],
+      [
+        "HASCO",
+        "S. Zheng"
+      ],
+      [
+        "MLIR",
+        "Scale-HLS"
+      ],
+      [
+        "CGRA Function Call",
+        "CGRA-Opt"
+      ],
+      [
+        "Machine Learning-CGRA Framework",
+        "MiniLM"
+      ],
+      [
+        "Parashar, A.",
+        "Timeloop: A Systematic Approach to DNN Accelerator Evaluation"
+      ],
+      [
+        "Antonino Tumeo",
+        "Pacific Northwest National Laboratory"
+      ],
+      [
+        "CGRA Runtime Library",
+        "Performance Concerns"
+      ],
+      [
+        "Deng, W.",
+        "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+      ],
+      [
+        "CGRAs",
+        "Machine Learning Models"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Weng, J."
+      ],
+      [
+        "CamemBERT: a Tasty French Language Model",
+        "Martin, L."
+      ],
+      [
+        "HASCO: Towards Agile hardware and software co-Design for Tensor Computation",
+        "Zheng, S."
+      ],
+      [
+        "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
+        "Riddle, R."
+      ],
+      [
+        "Accelerating Scientific Applications With SambaNova Reconfigurable Dataflow Ar-chitecture",
+        "C. Adams, M."
+      ],
+      [
+        "CGRAs",
+        "Dataflow Graph (DFG)"
+      ],
+      [
+        "HybridDNN",
+        "Y. Lin"
+      ],
+      [
+        "Architectural Implications for Inference of Graph Neural Networks on CGRA-based Accelerators",
+        "L. Fanucci"
+      ],
+      [
+        "CGRAs",
+        "FPGA"
+      ],
+      [
+        "Stream processing dual-track CGRA for object inference",
+        "Wu, W."
+      ],
+      [
+        "Iterative modulo scheduling: An algorithm for software pipelining loops",
+        "Rau, B. R."
+      ],
+      [
+        "CGRA",
+        "Scale-HLS"
+      ],
+      [
+        "CGRA Runtime Library",
+        "Register-Transfer-Level Simulation"
+      ],
+      [
+        "Computer Vision",
+        "Machine Learning-CGRA Framework"
+      ],
+      [
+        "ML-CGRA",
+        "Semantic Information Leverage"
+      ]
+    ],
+    "count": 209,
+    "create_time": 1766322506,
+    "update_time": 1766322506,
+    "_id": "doc-d8c2ef81c740e3304bf0d2d4bd5aef53"
+  },
+  "doc-4b52003cef707458e9ab122176b8842d": {
+    "relation_pairs": [
+      [
+        "Baseline Design",
+        "Full32 CGRA"
+      ],
+      [
+        "Peitian Pan",
+        "Pymtl3"
+      ],
+      [
+        "Benson Chau",
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks"
+      ],
+      [
+        "Conventional Scalar CGRA",
+        "VecPAC"
+      ],
+      [
+        "Cheng Tan",
+        "Google"
+      ],
+      [
+        "Control-flow",
+        "Data-flow conversion"
+      ],
+      [
+        "4×4 VecPAC Design",
+        "accuracy, speedup"
+      ],
+      [
+        "Accuracy",
+        "CGRA"
+      ],
+      [
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks",
+        "Hadi Esmaeilzadeh"
+      ],
+      [
+        "A Template-based Framework for Exploring Coarse-grained Reconfigurable Architectures",
+        "Artur Podobas"
+      ],
+      [
+        "CACTI 6.5",
+        "N Muralimanohar"
+      ],
+      [
+        "HEAL-WEAR",
+        "vector computations"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "Raghu Prabhakar"
+      ],
+      [
+        "Satyajit Das",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "BitFusion [23]",
+        "Dynamic Matching"
+      ],
+      [
+        "Baseline Design",
+        "Conventional Scalar CGRA"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Richard Grisenthwaite"
+      ],
+      [
+        "Deepak Patil",
+        "Microsoft"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Jian Weng"
+      ],
+      [
+        "Davide Rossi",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Jeremy Fowers"
+      ],
+      [
+        "Hycube",
+        "Tulika Mitra"
+      ],
+      [
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks",
+        "Jongse Park"
+      ],
+      [
+        "Giovanni Ansaloni",
+        "IEEE Transactions on Circuits and Systems I: Regular Papers"
+      ],
+      [
+        "Area-Efficiency",
+        "VecPAC Architecture"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "Stefan Hadjis"
+      ],
+      [
+        "Speedup",
+        "VecPAC Architecture"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Yanan Lu"
+      ],
+      [
+        "Brian Gaide",
+        "Xilinx Adaptive Compute Acceleration Platform: Versaltm Architecture"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "Yaqi Zhang"
+      ],
+      [
+        "Branch-aware Loop Mapping on CGRAs",
+        "Sarma Vrudhula"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "David Koeplinger"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Shaojun Wei"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Sarah Massengill"
+      ],
+      [
+        "Chirag Ravishankar",
+        "Xilinx Adaptive Compute Acceleration Platform: Versaltm Architecture"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "Ganesh Gopalakrishnan"
+      ],
+      [
+        "Battelle Memorial Institute",
+        "VecPAC Design"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "Bo Fang"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Sihao Liu"
+      ],
+      [
+        "CACTI 6.5",
+        "N Jouppi"
+      ],
+      [
+        "VecPAC",
+        "Yosys"
+      ],
+      [
+        "Coarse-Grained Reconfigurable Arrays",
+        "VecPAC"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "Gu-Yeon Wei"
+      ],
+      [
+        "32-bit Fixed-Point Multiplication",
+        "VecPAC"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Pradeep Dubey"
+      ],
+      [
+        "Nicolas Bohm Agostini",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "Accuracy",
+        "VecPAC Architecture"
+      ],
+      [
+        "Asap7",
+        "Chandarasekaran Ramamurthy"
+      ],
+      [
+        "CGRAs",
+        "VecPAC"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Marius Cornea"
+      ],
+      [
+        "Accuracy Measurement",
+        "VecPAC"
+      ],
+      [
+        "VecPAC",
+        "Vector Adder"
+      ],
+      [
+        "CACTI 6.5",
+        "VecPAC's SRAM Design"
+      ],
+      [
+        "Arizona State University",
+        "Jeff Zhang"
+      ],
+      [
+        "Giuseppe Tagliavini",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "David Brooks"
+      ],
+      [
+        "Conv Kernel",
+        "SpMV"
+      ],
+      [
+        "64-bit Addition",
+        "VecPAC"
+      ],
+      [
+        "PyMTL3",
+        "VecPAC"
+      ],
+      [
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks",
+        "Liangzhen Lai"
+      ],
+      [
+        "Antonino Tumeo",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "Laura Pozzi"
+      ],
+      [
+        "HEAL-WEAR",
+        "VecPAC"
+      ],
+      [
+        "TRANSPIRE [22]",
+        "transprecision floating-point units"
+      ],
+      [
+        "DFG Generation",
+        "VecPAC"
+      ],
+      [
+        "Bingfeng Mei",
+        "Exploiting Loop-level Parallelism on Coarse-grained Reconfigurable Architectures Using Modulo Scheduling"
+      ],
+      [
+        "David Atienza",
+        "IEEE Transactions on Circuits and Systems I: Regular Papers"
+      ],
+      [
+        "Rohit Prasad",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "Thierry Tambe"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Neil Burgess"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Lita Yang"
+      ],
+      [
+        "VecPAC",
+        "full32 CGRA"
+      ],
+      [
+        "A Template-based Framework for Exploring Coarse-grained Reconfigurable Architectures",
+        "Kentaro Sano"
+      ],
+      [
+        "Fixed-Point Additions",
+        "VecPAC"
+      ],
+      [
+        "SPM",
+        "VecPAC"
+      ],
+      [
+        "FreePDK 45nm Cell Library",
+        "VecPAC"
+      ],
+      [
+        "Cheng Tan",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "Google",
+        "VecPAC"
+      ],
+      [
+        "Hycube",
+        "Manupa Karunaratne"
+      ],
+      [
+        "Jeff Zhang",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)",
+        "paper presentation"
+      ],
+      [
+        "Loop Unrolling",
+        "VecPAC"
+      ],
+      [
+        "Fixed-Point64 Vector FUs",
+        "VecPAC"
+      ],
+      [
+        "Fixed-Point32 Vector FUs",
+        "VecPAC"
+      ],
+      [
+        "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "Loris Duch"
+      ],
+      [
+        "A Template-based Framework for Exploring Coarse-grained Reconfigurable Architectures",
+        "Satoshi Matsuoka"
+      ],
+      [
+        "CGRAs",
+        "ILP"
+      ],
+      [
+        "Fixed-Point16 Vector FUs",
+        "VecPAC"
+      ],
+      [
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks",
+        "Hardik Sharma"
+      ],
+      [
+        "Aditi Kulkarni Mohite",
+        "Hycube"
+      ],
+      [
+        "Bo Fang",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "Cheng Tan"
+      ],
+      [
+        "Plasticine",
+        "VecPAC"
+      ],
+      [
+        "VecPAC",
+        "hybrid CGRA design"
+      ],
+      [
+        "DFG",
+        "MRRG Mapping"
+      ],
+      [
+        "Exploiting Loop-level Parallelism on Coarse-grained Reconfigurable Architectures Using Modulo Scheduling",
+        "Rudy Lauwereins"
+      ],
+      [
+        "LLVM Auto-Vectorization Pass",
+        "VecPAC"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "Kunle Olukotun"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Ming Liu"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Jianfeng Zhu"
+      ],
+      [
+        "Matt Feldman",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "CGRAs",
+        "Vector FUs"
+      ],
+      [
+        "Antonino Tumeo",
+        "Aurora: Automated refinement of coarse-grained reconfigurable accelerators"
+      ],
+      [
+        "Kevin JM Martin",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "4x4 VecPAC CGRA",
+        "power consumption, performance metrics"
+      ],
+      [
+        "Microsoft",
+        "VecPAC"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Sangwon Ha"
+      ],
+      [
+        "Brian Cline",
+        "Microelectronics Journal"
+      ],
+      [
+        "Kevin J Barker",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "Pacific Northwest National Laboratory",
+        "VecPAC"
+      ],
+      [
+        "Dusan Stosic",
+        "Fp8 Formats for Deep Learning"
+      ],
+      [
+        "David Koeplinger",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "CGRA template",
+        "Riken"
+      ],
+      [
+        "Ang Li",
+        "Opencgra: Democratizing coarse-grained reconfigurable arrays"
+      ],
+      [
+        "Kunle Olukotun",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "Gabriel Weisz",
+        "Microsoft"
+      ],
+      [
+        "CGRA",
+        "Scalar Functional Unit (FU)"
+      ],
+      [
+        "CGRA",
+        "Vector Functional Unit (FU)"
+      ],
+      [
+        "Exploiting Loop-level Parallelism on Coarse-grained Reconfigurable Architectures Using Modulo Scheduling",
+        "Serge Vernalde"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Ritchie Zhao"
+      ],
+      [
+        "Loop Vectorization",
+        "VecPAC"
+      ],
+      [
+        "Akash Kumar",
+        "Biocare"
+      ],
+      [
+        "CACTI 6.5",
+        "J Ahn"
+      ],
+      [
+        "Data-flow Graph simplification",
+        "Partial Predication"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Daniel Lo"
+      ],
+      [
+        "Trevor Bauer",
+        "Xilinx Adaptive Compute Acceleration Platform: Versaltm Architecture"
+      ],
+      [
+        "Asap7",
+        "Greg Yeric"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Tony Nowatzki"
+      ],
+      [
+        "Arizona State University",
+        "VecPAC"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Kalin Ovtcharov"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Zhaoshi Li"
+      ],
+      [
+        "Area",
+        "CGRA"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Raghu Prabhakar"
+      ],
+      [
+        "Exploiting Loop-level Parallelism on Coarse-grained Reconfigurable Architectures Using Modulo Scheduling",
+        "Hugo De Man"
+      ],
+      [
+        "VecPAC Design",
+        "performance metrics, accuracy levels"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Yangdong Deng"
+      ],
+      [
+        "Bit`a Darvish Rouhani",
+        "Microsoft Floating Point"
+      ],
+      [
+        "Christos Kozyrakis",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "Accuracy Measurement",
+        "Baseline Design"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Vidushi Dadu"
+      ],
+      [
+        "Ardavan Pedram",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "PX-CGRA [4]",
+        "polymorphic-approximated ALU clusters"
+      ],
+      [
+        "Hycube",
+        "Li-Shiuan Peh"
+      ],
+      [
+        "CGRA (Coarse-Grained Reconfigurable Array)",
+        "Scalar Tile"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Anna Vinogradsky"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Jie Han"
+      ],
+      [
+        "Aviral Shrivastava",
+        "Branch-aware Loop Mapping on CGRAs"
+      ],
+      [
+        "Fusion Capability",
+        "VecPAC"
+      ],
+      [
+        "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "Soumya Basu"
+      ],
+      [
+        "Partial Vectorization",
+        "kernel optimization"
+      ],
+      [
+        "Conv Kernel",
+        "LatNRM"
+      ],
+      [
+        "CGRA",
+        "Speedup"
+      ],
+      [
+        "Christopher Batten",
+        "Pymtl3"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Tian Zhao"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Zhengrong Wang"
+      ],
+      [
+        "Figure 9",
+        "trade-off analysis, performance metrics"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "Matt Feldman"
+      ],
+      [
+        "VecPAC Design",
+        "accuracy"
+      ],
+      [
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks",
+        "Naveen Suda"
+      ],
+      [
+        "A 0.80 PJ/Flop, 1.24 TFLOP/SW 8-to-64 Bit Transprecision Floating-point Unit for an 64-bit RISC-V Processor in 22nm FD-SOI",
+        "Florian Zaruba"
+      ],
+      [
+        "Biocare",
+        "Zahra Ebrahimi"
+      ],
+      [
+        "Bit fusion: Bit-level dynamically composable architecture for accelerating deep neural networks",
+        "Vikas Chandra"
+      ],
+      [
+        "Branch-aware Loop Mapping on CGRAs",
+        "Mahdi Hamzeh"
+      ],
+      [
+        "Dinesh Gaitonde",
+        "Xilinx Adaptive Compute Acceleration Platform: Versaltm Architecture"
+      ],
+      [
+        "CACTI 6.5",
+        "Shyamkumar Thoziyoor"
+      ],
+      [
+        "Riken",
+        "VecPAC"
+      ],
+      [
+        "Ang Li",
+        "Aurora: Automated refinement of coarse-grained reconfigurable accelerators"
+      ],
+      [
+        "VecPAC",
+        "Vector Tiles"
+      ],
+      [
+        "Microelectronics Journal",
+        "Saurabh Sinha"
+      ],
+      [
+        "Philippe Coussy",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "Conv Kernel",
+        "Histogram"
+      ],
+      [
+        "DFG Tuning",
+        "MRRG Mapping"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Paulius Micikevicius"
+      ],
+      [
+        "Aurora: Automated refinement of coarse-grained reconfigurable accelerators",
+        "Kevin J Barker"
+      ],
+      [
+        "Advances in Neural Information Processing Systems",
+        "Ray Bittner"
+      ],
+      [
+        "A 0.80 PJ/Flop, 1.24 TFLOP/SW 8-to-64 Bit Transprecision Floating-point Unit for an 64-bit RISC-V Processor in 22nm FD-SOI",
+        "Fabian Schuiki"
+      ],
+      [
+        "Pymtl3",
+        "Shunning Jiang"
+      ],
+      [
+        "A 0.80 PJ/Flop, 1.24 TFLOP/SW 8-to-64 Bit Transprecision Floating-point Unit for an 64-bit RISC-V Processor in 22nm FD-SOI",
+        "Luca Benini"
+      ],
+      [
+        "Asap7",
+        "Ifren"
+      ],
+      [
+        "A Reconfigurable Architecture for Parallel Patterns",
+        "Tian Zhao"
+      ],
+      [
+        "Antonino Tumeo",
+        "Pacific Northwest National Laboratory"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Shouyi Yin"
+      ],
+      [
+        "16-bit Fixed-Point Multiplication",
+        "VecPAC"
+      ],
+      [
+        "Luca Benini",
+        "Transpire: An energy-efficient transprecision floating-point programmable architecture"
+      ],
+      [
+        "Pymtl3",
+        "Yanghui Ou"
+      ],
+      [
+        "VecPAC Design",
+        "performance comparison, conventional scalar CGRA"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "Patrick Judd"
+      ],
+      [
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs",
+        "Jeff Zhang"
+      ],
+      [
+        "Diederik Verkest",
+        "Exploiting Loop-level Parallelism on Coarse-grained Reconfigurable Architectures Using Modulo Scheduling"
+      ],
+      [
+        "Alexander Heinecke",
+        "Fp8 Formats for Deep Learning"
+      ],
+      [
+        "Dsagen: Synthesizing programmable spatial accelerators",
+        "Preyas Shah"
+      ],
+      [
+        "IEEE Transactions on Circuits and Systems I: Regular Papers",
+        "Rubén Braojos"
+      ],
+      [
+        "Antonino Tumeo",
+        "Asap: automatic synthesis of area-efficient and precision-aware CGRAs"
+      ],
+      [
+        "Fp8 Formats for Deep Learning",
+        "John Kamalu"
+      ],
+      [
+        "BioCare [9]",
+        "execution modes"
+      ],
+      [
+        "ASAP [25]",
+        "hardware/software co-design framework"
+      ],
+      [
+        "Aditya Gujja",
+        "Asap7"
+      ],
+      [
+        "A Survey of Coarse-Grained Reconfigurable Architecture and Design: Taxonomy, Challenges, and Applications",
+        "Leibo Liu"
+      ],
+      [
+        "Microsoft",
+        "Steve Reinhardt"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Stefan Hadjis"
+      ],
+      [
+        "Precision-Aware CGRA",
+        "design consideration"
+      ],
+      [
+        "A 0.80 PJ/Flop, 1.24 TFLOP/SW 8-to-64 Bit Transprecision Floating-point Unit for an 64-bit RISC-V Processor in 22nm FD-SOI",
+        "Stefan Mach"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Yaqi Zhang"
+      ]
+    ],
+    "count": 203,
+    "create_time": 1766322541,
+    "update_time": 1766322541,
+    "_id": "doc-4b52003cef707458e9ab122176b8842d"
+  },
+  "doc-52779bec54413092715a3f3fa7671a09": {
+    "relation_pairs": [
+      [
+        "CGRA",
+        "Graph Convolutional Network"
+      ],
+      [
+        "Sara: Scaling a Reconfigurable Dataflow Accelerator",
+        "Yaqi Zhang, Nathan Zhang, Tian Zhao, Matt Vilim, Muhammad Shahbaz, and Kunle Olukotun"
+      ],
+      [
+        "LUPDecompose",
+        "LUPSolver"
+      ],
+      [
+        "5×5 DRIPS Prototype",
+        "Cadence Innovus"
+      ],
+      [
+        "Crossbar Switches",
+        "Tile"
+      ],
+      [
+        "Combine",
+        "Combine Kernel"
+      ],
+      [
+        "communication dependencies",
+        "per-row shared bus"
+      ],
+      [
+        "B'",
+        "B'@3 tiles"
+      ],
+      [
+        "Algorithm 1",
+        "reshape()"
+      ],
+      [
+        "DRIPS CGRA",
+        "PyMTL3"
+      ],
+      [
+        "CGRAs",
+        "Kernel Support"
+      ],
+      [
+        "accelerator command",
+        "host processor"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Versal Device"
+      ],
+      [
+        "Cheng Yang",
+        "Jie Zhou"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Pooling"
+      ],
+      [
+        "DRIPS Tile",
+        "Functional Unit (FU)"
+      ],
+      [
+        "Graph Convolutional Networks",
+        "SpMV Kernel"
+      ],
+      [
+        "DRIPS",
+        "Reconfigurable Computing Grid Array (CGRA)"
+      ],
+      [
+        "Ang Li",
+        "DRIPS"
+      ],
+      [
+        "DRIPS Control Network",
+        "depTable"
+      ],
+      [
+        "CGRA",
+        "SPM"
+      ],
+      [
+        "DRIPS",
+        "additional area overhead"
+      ],
+      [
+        "GCN",
+        "Normalized STDEV"
+      ],
+      [
+        "Edge Computing Devices",
+        "Paciﬁc Northwest National Laboratory"
+      ],
+      [
+        "CGRA",
+        "Sparse Matrix-Vector Multiplication"
+      ],
+      [
+        "Matt Feldman",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "Cheng Tan",
+        "DRIPS"
+      ],
+      [
+        "Static Resource Partitioning",
+        "Throughput Improvement"
+      ],
+      [
+        "accelerator command",
+        "accelerator execution"
+      ],
+      [
+        "Cheng Tan",
+        "Stitch"
+      ],
+      [
+        "Fpga Clusters",
+        "Llvm: A Compilation Framework for Lifelong Program Analysis & Transformation"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Throughput-Oriented Acceleration"
+      ],
+      [
+        "Executing Synchronous Dataflow Graphs on a Spm-Based Multicore Architecture",
+        "{DAC Design Automation Conference 2012}"
+      ],
+      [
+        "DRIPS Controller",
+        "depTable"
+      ],
+      [
+        "Graph neural networks: A review of methods and applications",
+        "Shengding Hu"
+      ],
+      [
+        "Raytracing Application",
+        "Throughput Improvement"
+      ],
+      [
+        "Enabling multithreading on CGRAs",
+        "Sarma Vrudhula"
+      ],
+      [
+        "DRIPS Controller",
+        "Tile"
+      ],
+      [
+        "CGRA",
+        "DRIPS Compilation Framework"
+      ],
+      [
+        "DRIPS Controller",
+        "mapTable"
+      ],
+      [
+        "DRIPS Controller",
+        "Rebalancing Overhead"
+      ],
+      [
+        "Router",
+        "Tile"
+      ],
+      [
+        "Ra. Synergy",
+        "Zhiyuan Liu"
+      ],
+      [
+        "DRIPS Compilation Framework",
+        "LLVM IR"
+      ],
+      [
+        "A Competent Performance Analysis of King Mesh Topology",
+        "King Mesh Topology"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Non-pipeline Execution"
+      ],
+      [
+        "DMA Unit",
+        "DRIPS Controller"
+      ],
+      [
+        "Jie Zhou",
+        "Ra. Synergy"
+      ],
+      [
+        "LLVM IR",
+        "MLIR front-end"
+      ],
+      [
+        "Dataflow Graph",
+        "Sparse Matrix-Vector Multiplication"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Stefan Hadjis"
+      ],
+      [
+        "DRIPS",
+        "Jiajia Li"
+      ],
+      [
+        "Cheng Tan",
+        "Synergy"
+      ],
+      [
+        "Raytracing application",
+        "multi-stage raytracing kernels"
+      ],
+      [
+        "CGRA",
+        "DFG nodes"
+      ],
+      [
+        "600 enzymes",
+        "ENZYMES dataset"
+      ],
+      [
+        "LLVM",
+        "MLIR"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Pipelined Execution"
+      ],
+      [
+        "Graph Neural Networks",
+        "Sparse Matrix-Vector Multiplication"
+      ],
+      [
+        "Ganqu Cui",
+        "Zhengyan Zhang"
+      ],
+      [
+        "Lifeng Wang",
+        "Ra. Synergy"
+      ],
+      [
+        "A'",
+        "A'@4 tiles"
+      ],
+      [
+        "DetPos",
+        "Raytracing Application"
+      ],
+      [
+        "GNN Model",
+        "tosa MLIR Dialect"
+      ],
+      [
+        "Ra. Synergy",
+        "Zhengyan Zhang"
+      ],
+      [
+        "Combine Kernel",
+        "CombineReLU"
+      ],
+      [
+        "(0,3) (0,4)",
+        "DRIPS Controller"
+      ],
+      [
+        "FPGA Dynamic and Partial Reconfiguration: A Survey of Architectures, Methods, and Applications",
+        "Kizheppatt Vipin and Suhaib A Fahmy"
+      ],
+      [
+        "Enabling multithreading on CGRAs",
+        "Jared Pager"
+      ],
+      [
+        "A Novel Fast Online Placement Algorithm",
+        "Online Placement Algorithm"
+      ],
+      [
+        "DRIPS",
+        "Kevin J. Barker"
+      ],
+      [
+        "Pooling",
+        "Pooling Kernel"
+      ],
+      [
+        "Graph Convolutional Networks",
+        "Sparse Matrix-Vector Multiplication"
+      ],
+      [
+        "Ardavan Pedram",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "Enzymes",
+        "Graph Convolutional Network (GCN)"
+      ],
+      [
+        "Configurable Gate Array",
+        "Graph Convolutional Network"
+      ],
+      [
+        "DRIPS tiles",
+        "per-row shared bus"
+      ],
+      [
+        "5×5 DRIPS Prototype",
+        "Synopsys PrimeTime PX"
+      ],
+      [
+        "DRIPS Control Network",
+        "DRIPS Controller"
+      ],
+      [
+        "DRIPS Architecture",
+        "Table I"
+      ],
+      [
+        "DRIPS",
+        "Rebalance"
+      ],
+      [
+        "13th {USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 18)",
+        "An Automated End-to-End Optimizing Compiler for Deep Learning"
+      ],
+      [
+        "Christos Kozyrakis",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "DMA Controller",
+        "Kernel"
+      ],
+      [
+        "(2,3)",
+        "Original placement"
+      ],
+      [
+        "Aggregate Kernel",
+        "SpMM"
+      ],
+      [
+        "Input Instances",
+        "Kernels"
+      ],
+      [
+        "GCN Model",
+        "protobuf file"
+      ],
+      [
+        "Control Memory",
+        "DRIPS Tile"
+      ],
+      [
+        "Cgra",
+        "Flattening-Based Mapping of Imperfect Loop Nests for Cgra"
+      ],
+      [
+        "(1,2) (2,2) (1,3) (1,4) (0,4)",
+        "DRIPS Controller"
+      ],
+      [
+        "Cheng Tan",
+        "Locus"
+      ],
+      [
+        "A'",
+        "linalg.generic Operations"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Raghu Prabhakar"
+      ],
+      [
+        "DRIPS",
+        "statically partitioned solution"
+      ],
+      [
+        "Registers",
+        "Tile"
+      ],
+      [
+        "depTable",
+        "global banked SPM"
+      ],
+      [
+        "depTable",
+        "mapTable"
+      ],
+      [
+        "Kehuai Wu, Andreas Kanstein, Jan Madsen, and Mladen Berekovic",
+        "Mt-Adres"
+      ],
+      [
+        "DRIPS",
+        "Tong Geng"
+      ],
+      [
+        "DFG Generation",
+        "DRIPS Compilation Framework"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Throughput"
+      ],
+      [
+        "FG",
+        "Section IV-B"
+      ],
+      [
+        "Dataflow Graph",
+        "LLVM Intermediate Representation"
+      ],
+      [
+        "Changcheng Li",
+        "Ra. Synergy"
+      ],
+      [
+        "CGRA",
+        "Reconfigurable Computing Grid Array (CGRA)"
+      ],
+      [
+        "Aggregate Kernel",
+        "Aggregate1"
+      ],
+      [
+        "Raytracing Application",
+        "TrackInt"
+      ],
+      [
+        "5×5 CGRA prototype",
+        "DRIPS"
+      ],
+      [
+        "Dataflow Graph",
+        "Static Hardware Allocation Approach"
+      ],
+      [
+        "Jie Zhou",
+        "Lifeng Wang"
+      ],
+      [
+        "TensorFlow-MLIR",
+        "protobuf file"
+      ],
+      [
+        "CGRA Accelerator",
+        "CPU"
+      ],
+      [
+        "Aggregate Kernels",
+        "DRIPS"
+      ],
+      [
+        "An Automated End-to-End Optimizing Compiler for Deep Learning",
+        "Deep Learning"
+      ],
+      [
+        "DRIPS Controller",
+        "downgrade()"
+      ],
+      [
+        "CGRA",
+        "Kernel"
+      ],
+      [
+        "Loop Flattening",
+        "MLIR"
+      ],
+      [
+        "32KB Scratchpad Data Memory",
+        "CACTI-6.5"
+      ],
+      [
+        "ARENA [37]",
+        "Dynamic Mappings"
+      ],
+      [
+        "Ganqu Cui",
+        "Ra. Synergy"
+      ],
+      [
+        "DFG Mapping",
+        "DRIPS Compilation Framework"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Xilinx Adaptable Intelligent Engines"
+      ],
+      [
+        "B'",
+        "linalg.generic Operations"
+      ],
+      [
+        "reshape()",
+        "tile"
+      ],
+      [
+        "C'",
+        "Ctrl Signal"
+      ],
+      [
+        "GCN",
+        "Throughput Improvement"
+      ],
+      [
+        "Maosong Sun",
+        "Ra. Synergy"
+      ],
+      [
+        "DRIPS Architecture",
+        "SPM Size Evaluation"
+      ],
+      [
+        "data dependencies",
+        "tiles"
+      ],
+      [
+        "DRIPS Tile",
+        "Registers"
+      ],
+      [
+        "(2,2) (1,4) (1,3) (1,2)",
+        "DRIPS Controller"
+      ],
+      [
+        "Graph neural networks: A review of methods and applications",
+        "Zhiyuan Liu"
+      ],
+      [
+        "Spacetime Technology",
+        "Tabula"
+      ],
+      [
+        "Antonino Tumeo",
+        "Opencgra"
+      ],
+      [
+        "(0,3) (1,3)",
+        "DRIPS Controller"
+      ],
+      [
+        "DRIPS Controller",
+        "upgrade()"
+      ],
+      [
+        "Jiajia Li",
+        "email"
+      ],
+      [
+        "kernels",
+        "mapTable"
+      ],
+      [
+        "GCN",
+        "SpMM"
+      ],
+      [
+        "CGRAs",
+        "Field Programmable Gate Arrays (FPGAs)"
+      ],
+      [
+        "Enabling multithreading on CGRAs",
+        "Mahdi Hamzeh"
+      ],
+      [
+        "Loop Flattening",
+        "linalg.generic Operations"
+      ],
+      [
+        "2017 ACM/IEEE 44th Annual International Symposium on Computer Architecture (ISCA)",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "(2,2) (2,3) (1,4) (0,4)",
+        "DRIPS Controller"
+      ],
+      [
+        "DRIPS Tile",
+        "Data Memory (SPM)"
+      ],
+      [
+        "Cheng Tan",
+        "Ultra-Elastic CGRAs"
+      ],
+      [
+        "5×5 DRIPS Prototype",
+        "Operating Power Consumption"
+      ],
+      [
+        "Arena",
+        "Kevin Barker"
+      ],
+      [
+        "DRIPS Compilation Framework",
+        "SPM"
+      ],
+      [
+        "Graph neural networks: A review of methods and applications",
+        "Jie Zhou"
+      ],
+      [
+        "Algorithm 1",
+        "upgrade()"
+      ],
+      [
+        "depTable",
+        "kernels"
+      ],
+      [
+        "David Koeplinger",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "DRIPS Compilation Framework",
+        "Streaming Application"
+      ],
+      [
+        "C'",
+        "C'@2 tiles"
+      ],
+      [
+        "Graph neural networks: A review of methods and applications",
+        "Zhengyan Zhang"
+      ],
+      [
+        "Ang Li",
+        "Opencgra"
+      ],
+      [
+        "Aggregate Kernel",
+        "SpMV"
+      ],
+      [
+        "Graph neural networks: A review of methods and applications",
+        "Maosong Sun"
+      ],
+      [
+        "ACM Transactions on Embedded Computing Systems (TECS)",
+        "Ra. Synergy"
+      ],
+      [
+        "Coarse-Grain Reconfigurable Hardware Utilization",
+        "{VLSI Circuits and Systems III}"
+      ],
+      [
+        "Kernel",
+        "Rebalancing Overhead"
+      ],
+      [
+        "DRIPS Controller",
+        "rebalancing mechanism"
+      ],
+      [
+        "Graph Convolutional Network",
+        "SambaNova Reconﬁgurable Dataﬂow Unit"
+      ],
+      [
+        "D'",
+        "linalg.generic Operations"
+      ],
+      [
+        "Aggregation1",
+        "Graph Convolutional Network"
+      ],
+      [
+        "Branch-Aware Loop Mapping on Cgras",
+        "{Proceedings of the 51st Annual Design Automation Conference}"
+      ],
+      [
+        "DRIPS Controller",
+        "exeTable"
+      ],
+      [
+        "DRIPS",
+        "Data Streaming"
+      ],
+      [
+        "Sparse Tensor Conversion",
+        "linalg.generic Operations"
+      ],
+      [
+        "statically partitioned solution",
+        "throughput improvement"
+      ],
+      [
+        "Cheng Tan",
+        "Opencgra"
+      ],
+      [
+        "Cheng Yang",
+        "Ra. Synergy"
+      ],
+      [
+        "CGRA Area Distribution",
+        "DRIPS Controller"
+      ],
+      [
+        "DRIPS Controller",
+        "Kernel"
+      ],
+      [
+        "5×5 CGRA prototype",
+        "throughput improvement"
+      ],
+      [
+        "Ganqu Cui",
+        "Shengding Hu"
+      ],
+      [
+        "DRIPS Controller",
+        "getMax()"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Streaming Application"
+      ],
+      [
+        "Bit-Level Reconfiguration",
+        "Tabula"
+      ],
+      [
+        "DRIPS Controller",
+        "Raytracing Application"
+      ],
+      [
+        "Fast Graph Representation Learning with Pytorch Geometric",
+        "Graph Neural Networks"
+      ],
+      [
+        "Jie Zhou",
+        "Shengding Hu"
+      ],
+      [
+        "Aggregation2",
+        "Graph Convolutional Network"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Relu"
+      ],
+      [
+        "DRIPS",
+        "Dynamic Mappings"
+      ],
+      [
+        "Control Memory",
+        "Tile"
+      ],
+      [
+        "GCN",
+        "Time Window"
+      ],
+      [
+        "Cheng Tan",
+        "Pyocn"
+      ],
+      [
+        "exeTable",
+        "mapTable"
+      ],
+      [
+        "Fpdeep: Acceleration and Load Balancing of Cnn Training on Fpga Clusters",
+        "{2018 IEEE 26th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)}"
+      ],
+      [
+        "Baseline",
+        "DRIPS Architecture"
+      ],
+      [
+        "Jiajia Li",
+        "Paciﬁc Northwest National Laboratory"
+      ],
+      [
+        "Smat: An Input Adaptive Auto-Tuner for Sparse Matrix-Vector Multiplication",
+        "Sparse Matrix-Vector Multiplication"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Yaqi Zhang"
+      ],
+      [
+        "(1,4)",
+        "Reshaped placement"
+      ],
+      [
+        "CGRA",
+        "Mable Gate"
+      ],
+      [
+        "Cgra",
+        "Chordmap: Automated Mapping of Streaming Applications Onto Cgra"
+      ],
+      [
+        "Algorithm 1",
+        "DRIPS Controller"
+      ],
+      [
+        "DRIPS tiles",
+        "global banked SPM"
+      ],
+      [
+        "Jie Zhou",
+        "Zhiyuan Liu"
+      ],
+      [
+        "PrioObj",
+        "Raytracing Application"
+      ],
+      [
+        "Aggregate2",
+        "Compress"
+      ],
+      [
+        "LLVM",
+        "hardware backend"
+      ],
+      [
+        "A'",
+        "A'@5 tiles"
+      ],
+      [
+        "Combine Kernels",
+        "DRIPS"
+      ],
+      [
+        "LUPDecompose",
+        "LUPDeterminant"
+      ],
+      [
+        "LU Application",
+        "MLIR Front-End"
+      ],
+      [
+        "Changcheng Li",
+        "Graph neural networks: A review of methods and applications"
+      ],
+      [
+        "Mapping",
+        "Optimized LLVM IR File"
+      ],
+      [
+        "CGRAs",
+        "DRIPS"
+      ],
+      [
+        "DRIPS Controller",
+        "getOverlap()"
+      ],
+      [
+        "Guanwen Zhong",
+        "Synergy"
+      ],
+      [
+        "DRIPS",
+        "Graph Convolutional Network"
+      ],
+      [
+        "Ctrl Signal",
+        "D'"
+      ],
+      [
+        "Algorithm 1",
+        "downgrade()"
+      ],
+      [
+        "Loop Unrolling",
+        "linalg.generic Operations"
+      ],
+      [
+        "Jie Zhou",
+        "Maosong Sun"
+      ],
+      [
+        "LU Application",
+        "University of Florida sparse matrix collection"
+      ],
+      [
+        "DRIPS Controller",
+        "getMin()"
+      ],
+      [
+        "Crossbar Switches",
+        "DRIPS Tile"
+      ],
+      [
+        "16.34% of the entire area",
+        "additional area overhead"
+      ],
+      [
+        "depTable",
+        "exeTable"
+      ],
+      [
+        "DRIPS Controller",
+        "Throughput Improvement"
+      ],
+      [
+        "Optimizing Coarse-Grain Reconfigurable Hardware Utilization Through Multiprocessing: An H. 264/Avc Decoder Example",
+        "{VLSI Circuits and Systems III}"
+      ],
+      [
+        "LUPDecompose",
+        "Lower–Upper (LU) Decomposition"
+      ],
+      [
+        "LUPDecompose",
+        "LUPInvert"
+      ],
+      [
+        "heuristic mapping algorithms",
+        "regular shapes"
+      ],
+      [
+        "Ganqu Cui",
+        "Graph neural networks: A review of methods and applications"
+      ],
+      [
+        "Different Sizes of Data Memory",
+        "Throughput Improvement"
+      ],
+      [
+        "DRIPS Architecture",
+        "SPM"
+      ],
+      [
+        "Jun Zhang, Tan Deng, Qiuyan Gao, Qingfeng Zhuge, and Edwin H-M Sha",
+        "Optimizing Data Allocation for Loops on Embedded Systems with Scratch-Pad Memory"
+      ],
+      [
+        "Different Sizes of SPM",
+        "Throughput Improvement"
+      ],
+      [
+        "DRIPS",
+        "throughput improvement"
+      ],
+      [
+        "Authorized licensed use limited to: BEIJING UNIVERSITY OF POST AND TELECOM.",
+        "IEEE Xplore"
+      ],
+      [
+        "Aggregate Kernel",
+        "Aggregate2"
+      ],
+      [
+        "Fpdeep: Acceleration and Load Balancing of Cnn Training on Fpga Clusters",
+        "Fpga Clusters"
+      ],
+      [
+        "Antonino Tumeo",
+        "DRIPS"
+      ],
+      [
+        "5×5 DRIPS Prototype",
+        "Synopsys Design Compiler"
+      ],
+      [
+        "Functional Unit",
+        "Tile"
+      ],
+      [
+        "additional area overhead",
+        "throughput improvement"
+      ],
+      [
+        "Loop-Level Transformations",
+        "kernels"
+      ],
+      [
+        "Data Centers",
+        "IoT"
+      ],
+      [
+        "Cg Rosa",
+        "Mlir: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "DRIPS Architecture",
+        "Loop Unrolling"
+      ],
+      [
+        "Compress",
+        "DRIPS"
+      ],
+      [
+        "Aviral Shrivastava",
+        "Enabling multithreading on CGRAs"
+      ],
+      [
+        "Bitstream Size",
+        "FPGAs"
+      ],
+      [
+        "Chenhao Xie",
+        "DRIPS"
+      ],
+      [
+        "Raytracing",
+        "Throughput Improvement"
+      ],
+      [
+        "CGRA",
+        "Configurable Gate Array Reconfigurable Architecture"
+      ],
+      [
+        "Enabling multithreading on CGRAs",
+        "Reiley Jeyapaul"
+      ],
+      [
+        "CGRA",
+        "GCN"
+      ],
+      [
+        "DRIPS Compilation Framework",
+        "MLIR"
+      ],
+      [
+        "DRIPS CGRA",
+        "addrTable"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Input Data Variations"
+      ],
+      [
+        "DRIPS",
+        "Execution Status"
+      ],
+      [
+        "A'",
+        "Ctrl Signal"
+      ],
+      [
+        "CGRA",
+        "Data Streaming"
+      ],
+      [
+        "Plasticine: A reconfigurable architecture for parallel patterns",
+        "Tian Zhao"
+      ],
+      [
+        "Tosa MLIR Dialect",
+        "linalg.generic Operations"
+      ],
+      [
+        "Ra. Synergy",
+        "Shengding Hu"
+      ],
+      [
+        "5 Objectives",
+        "Kernels"
+      ],
+      [
+        "DRIPS",
+        "Kernel"
+      ],
+      [
+        "DRIPS Tile",
+        "Reconnector"
+      ],
+      [
+        "Loop Flattening",
+        "Loop Unrolling"
+      ],
+      [
+        "Cheng Yang",
+        "Graph neural networks: A review of methods and applications"
+      ],
+      [
+        "PyMTL3 Model",
+        "Synthesizable Verilog Code"
+      ],
+      [
+        "DRIPS",
+        "Nicolas Bohm Agostini"
+      ],
+      [
+        "Changcheng Li",
+        "Jie Zhou"
+      ],
+      [
+        "5×5 DRIPS Prototype",
+        "FreePDK45"
+      ],
+      [
+        "CGRA",
+        "Solver0"
+      ],
+      [
+        "CGRA",
+        "DRIPS"
+      ],
+      [
+        "CGRA",
+        "DRIPS Architecture"
+      ],
+      [
+        "DMA Controller",
+        "Rebalancing Overhead"
+      ],
+      [
+        "Llvm: A Compilation Framework for Lifelong Program Analysis & Transformation",
+        "Mlir: Scaling Compiler Infrastructure for Domain Specific Computation"
+      ],
+      [
+        "DRIPS",
+        "HPCA"
+      ],
+      [
+        "Loop Unrolling",
+        "MLIR"
+      ],
+      [
+        "5×5 CGRA prototype",
+        "additional area overhead"
+      ],
+      [
+        "Graph Convolutional Network",
+        "Input Graphs"
+      ],
+      [
+        "C'",
+        "linalg.generic Operations"
+      ],
+      [
+        "CGRA",
+        "DRIPS Controller"
+      ],
+      [
+        "ARENA",
+        "DRIPS Architecture"
+      ],
+      [
+        "Solver0",
+        "Solver1"
+      ],
+      [
+        "Ganqu Cui",
+        "Jie Zhou"
+      ],
+      [
+        "Graph neural networks: A review of methods and applications",
+        "Lifeng Wang"
+      ],
+      [
+        "Combine Kernel",
+        "GEMM"
+      ],
+      [
+        "B'",
+        "Ctrl Signal"
+      ],
+      [
+        "Arena",
+        "Cheng Tan"
+      ],
+      [
+        "DRIPS Controller",
+        "DRIPS pipeline rebalancing mechanism"
+      ],
+      [
+        "Decompose",
+        "Init"
+      ],
+      [
+        "LU",
+        "Throughput Improvement"
+      ],
+      [
+        "DRIPS Architecture",
+        "Throughput Improvement"
+      ],
+      [
+        "Jie Zhou",
+        "Zhengyan Zhang"
+      ],
+      [
+        "GCN Application",
+        "Throughput Improvement"
+      ],
+      [
+        "GCNs",
+        "Pytorch-Geometric"
+      ],
+      [
+        "Combine",
+        "Graph Convolutional Network"
+      ],
+      [
+        "Sparskit: A basic tool kit for sparse matrix computations",
+        "Youcef Saad"
+      ],
+      [
+        "Cgra",
+        "Pymtl3: A Python Framework for Open-Source Hardware Modeling, Generation, Simulation, and Verification"
+      ],
+      [
+        "DMA unit",
+        "transfer data"
+      ],
+      [
+        "DRIPS Controller",
+        "reshape()"
+      ],
+      [
+        "Kunle Olukotun",
+        "Plasticine: A reconfigurable architecture for parallel patterns"
+      ],
+      [
+        "DFG Generation",
+        "Optimized LLVM IR File"
+      ]
+    ],
+    "count": 304,
+    "create_time": 1766410769,
+    "update_time": 1766410769,
+    "_id": "doc-52779bec54413092715a3f3fa7671a09"
+  }
+}

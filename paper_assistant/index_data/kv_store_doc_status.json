@@ -1,0 +1,135 @@
+{
+  "doc-20e7767383b36835d70908fa6e0ba88c": {
+    "status": "processed",
+    "chunks_count": 13,
+    "chunks_list": [
+      "chunk-5f5f1607b7d6e9df741b1a30c64d74da",
+      "chunk-434fe16e9313a890ebca0145e7c4f4e7",
+      "chunk-1dc4a868072141c957b2a260dbd14959",
+      "chunk-28dc18967653f15f5790c6607c1d02e1",
+      "chunk-26064d6a9f50906d6ea350494b2c8125",
+      "chunk-792ab06d8ab8c23e7b235562725ccfed",
+      "chunk-73a70981efd2312d63fb00de012f7ecc",
+      "chunk-84fd5b5e81c32cb7563f258a9793a359",
+      "chunk-e8993318ac130965c4393ca23d77a9b0",
+      "chunk-0a501c4c92dd83d3a8ada5a6a154e5be",
+      "chunk-11d2ec414aca765a5c1fcaeb669dfa1c",
+      "chunk-3b8a60203f907b4197d9a51ae29be717",
+      "chunk-630a98871729b06216c9554103866c72"
+    ],
+    "content_summary": "An MLIR-based Compiler Flow for System-Level Design and\nHardware Acceleration\nNicolas Bohm Agostini∗\nPNNL\nRichland, WA, USA\nSerena Curzel†\nPolitecnico di Milano\nMilan, Italy\nVinay Amatya\nPNNL\nRichland, WA, USA\nCheng Tan\nPNNL\nRichland, WA, USA\nMarco M...",
+    "content_length": 51885,
+    "created_at": "2025-12-21T10:11:13.527221+00:00",
+    "updated_at": "2025-12-21T10:36:37.250385+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20251221_181113_45e6bfc2",
+    "metadata": {
+      "processing_start_time": 1766313295,
+      "processing_end_time": 1766313397
+    }
+  },
+  "doc-e4a8349a158e75492141b2c564253c34": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-e4a8349a158e75492141b2c564253c34"
+    ],
+    "content_summary": "An MLIR-based Compiler Flow for System-Level Design and\nHardware Acceleration\nNicolas Bohm Agostini∗\nPNNL\nRichland, WA, USA\nSerena Curzel†\nPolitecnico di Milano\nMilan, Italy\nVinay Amatya\nPNNL\nRichland, WA, USA\nCheng Tan\nPNNL\nRichland, WA, USA\nMarco M...",
+    "content_length": 2000,
+    "created_at": "2025-12-21T10:15:34.525109+00:00",
+    "updated_at": "2025-12-21T10:18:25.776100+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20251221_181534_8e80b468",
+    "metadata": {
+      "processing_start_time": 1766312213,
+      "processing_end_time": 1766312305
+    }
+  },
+  "doc-52779bec54413092715a3f3fa7671a09": {
+    "status": "processed",
+    "chunks_count": 21,
+    "chunks_list": [
+      "chunk-21d2d2feb71f0873f5e6a7016d1a0185",
+      "chunk-57a3a682d8c8b22c568166b68710bb5e",
+      "chunk-66bbd3d920ec2fc75c516befdf7597d1",
+      "chunk-1db998302836079483ae0d5d650ee931",
+      "chunk-5de0c17cc29f5bae6ae53b83abd67cef",
+      "chunk-072a87db7c5dbb5fd3ba6bae2d7254f2",
+      "chunk-3c66229a13b9e7497d436c800b1c1873",
+      "chunk-5dfdf451ecf45125ea01825c16c97036",
+      "chunk-0411f37c55f5d083441c3ffdea010254",
+      "chunk-6f7cad872120e96e22443543d20a47ae",
+      "chunk-7fde1c2f6a78bac431334c31848f80a7",
+      "chunk-204207b9dedb6d8465abf466a8da7b22",
+      "chunk-6d4450f52fadbb54a802ca26900dd202",
+      "chunk-0663013f37b4f7c3740127aa091def5f",
+      "chunk-c70d15fac8cde95102112baf7572b83a",
+      "chunk-2b8e7ceb7ade808ddedfa769ab7b31be",
+      "chunk-80f80a02f12f4e7d9000fea69ce18385",
+      "chunk-7072fc01e9661beefcb82100325a5dfa",
+      "chunk-e0968db063567aa5c194c4d23d930ee2",
+      "chunk-4710f68c57322d7a2866979db3c1a06b",
+      "chunk-aa21f9386a6987e30d35c291f0cb7067"
+    ],
+    "content_summary": "DRIPS: Dynamic Rebalancing of Pipelined\nStreaming Applications on CGRAs\nCheng Tan†, Nicolas Bohm Agostini†, Tong Geng†, Chenhao Xie†, Jiajia Li§, Ang Li†,\nKevin J. Barker†, Antonino Tumeo†\n†Paciﬁc Northwest National Laboratory, §William & Mary\n†{chen...",
+    "content_length": 68720,
+    "created_at": "2025-12-21T12:29:57.872858+00:00",
+    "updated_at": "2025-12-22T13:39:29.083025+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20251221_202957_b45e19af",
+    "metadata": {
+      "processing_start_time": 1766410103,
+      "processing_end_time": 1766410769
+    }
+  },
+  "doc-d8c2ef81c740e3304bf0d2d4bd5aef53": {
+    "status": "processed",
+    "chunks_count": 8,
+    "chunks_list": [
+      "chunk-d3b54ca06794c60a35a49b96c496c299",
+      "chunk-72c65d5d8186bf9226fd5144f638e4f4",
+      "chunk-53afaaa50e93cade10b3194ac28eed31",
+      "chunk-16f1a6bd6447df0c77352ebdfefe35e0",
+      "chunk-5e061de5d24e0a8bcadd81eaee61fe74",
+      "chunk-46c9950a6d7f273199820d455082eed4",
+      "chunk-f0886c552d53ba25f49b5968d4c7415d",
+      "chunk-46785dd71a0753269bf4434c15eff5ce"
+    ],
+    "content_summary": "ML-CGRA: An Integrated Compilation Framework to Enable\nEfficient Machine Learning Acceleration on CGRAs\nYixuan Luo*§, Cheng Tan*¶, Nicolas Bohm Agostini†, Ang Li†, Antonino Tumeo†, Nirav Dave¶, Tong Geng§\n§University of Rochester, †Pacific Northwest ...",
+    "content_length": 32772,
+    "created_at": "2025-12-21T12:29:57.935636+00:00",
+    "updated_at": "2025-12-21T13:08:26.037015+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20251221_202957_4e0906c0",
+    "metadata": {
+      "processing_start_time": 1766321813,
+      "processing_end_time": 1766322506
+    }
+  },
+  "doc-4b52003cef707458e9ab122176b8842d": {
+    "status": "processed",
+    "chunks_count": 10,
+    "chunks_list": [
+      "chunk-709227a765c55f9d3440bf6ca2a72a60",
+      "chunk-fb7fb6bd238c27a13ccbffd80022a059",
+      "chunk-ece4f507673e067d1b26b4c5db6aaef9",
+      "chunk-cda28e4ebe0ec435693bd0363dc0f134",
+      "chunk-92e82cee01030c7760843fcd3f03ed32",
+      "chunk-867038b972ebe25908221a61e9ba9a9c",
+      "chunk-68c4558c96bf4490d4f7c6a8af629f49",
+      "chunk-0e2dc42cf9d2604980f8a4ea00b9e5e9",
+      "chunk-54586d3930b70094d913e8ce5d0c9222",
+      "chunk-cee4e6d81a8f50430e325992b419c831"
+    ],
+    "content_summary": "VecPAC: A Vectorizable and Precision-Aware\nCGRA\nCheng Tan†, Deepak Patil§, Antonino Tumeo∗, Gabriel Weisz¶, Steve Reinhardt¶, Jeff Zhang§\n†Google, ¶Microsoft, ∗Pacific Northwest National Laboratory, §Arizona State University\n†chengtan@google.com, ¶{g...",
+    "content_length": 42543,
+    "created_at": "2025-12-21T12:29:57.992567+00:00",
+    "updated_at": "2025-12-21T13:09:01.587583+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20251221_202957_b572a7a6",
+    "metadata": {
+      "processing_start_time": 1766321813,
+      "processing_end_time": 1766322541
+    }
+  }
+}
