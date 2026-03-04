@@ -1608,5 +1608,47 @@
     "create_time": 1766411997,
     "update_time": 1766411997,
     "_id": "global:query:e157664a77c6ae521f4f14d4d8a8fe2d"
+  },
+  "global:keywords:33f243f4f7fe6681ddf3584a8aa2b957": {
+    "return": "{\"high_level_keywords\": [\"Core algorithm innovations\", \"Academic research\"], \"low_level_keywords\": [\"Algorithm design\", \"Innovative techniques\", \"Theoretical contributions\", \"Empirical studies\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "请总结这些论文中提出的核心算法创新点。",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1772619035,
+    "update_time": 1772619035,
+    "_id": "global:keywords:33f243f4f7fe6681ddf3584a8aa2b957"
+  },
+  "global:query:6740940bce0274e3e092604428c003ab": {
+    "return": "这些论文中提出了多个核心算法创新点，主要集中在编译器框架、硬件加速器设计和优化方法等方面。以下是这些论文中的主要创新点总结：\n\n1. **SODA-OPT**:\n   - **编译器框架扩展**：SODA-OPT扩展了MLIR基础设施，自动搜索、提取和优化代码区域，生成高质量的硬件加速器。它支持任何与MLIR基础设施接口的高级编程框架和领域特定语言。\n   - **高级优化和低级优化结合**：SODA-OPT通过高级优化和低级优化相结合的方法，提高了生成的加速器性能。它利用MLIR的多级中间表示（IR）来定义不同抽象层次的IR，从而简化了自动识别适合加速的关键代码区域的任务。\n   - **设计空间探索（DSE）**：SODA-OPT结合了设计空间探索引擎，以识别生成高性能加速器所需的编译器优化管道和选项。\n\n2. **ML-CGRA**:\n   - **MLIR基础的集成编译框架**：ML-CGRA基于MLIR基础设施，提供了一个集成的编译框架，用于高效地在CGRA上加速机器学习模型。它通过MLIR的高级优化解决了从高级ML框架到CGRA的映射问题。\n   - **高级结构利用**：ML-CGRA利用高级结构信息，简化了在预定义参数模板上的映射，提供了比传统方法更高效和灵活的解决方案。\n   - **开放源代码**：ML-CGRA是一个开源项目，提供了一个兼容各种ML前端（如ONNX、PyTorch、TensorFlow）的框架，并且易于扩展。\n\n3. **DRIPS**:\n   - **动态重新平衡**：DRIPS提出了一种新的CGRA架构，可以动态重新平衡数据依赖的流式应用程序的流水线，以最大化吞吐量。它通过统一的编译框架支持将给定的流式应用程序映射到DRIPS CGRA架构上。\n   - **循环级和LLVM级优化**：DRIPS在循环级和LLVM级应用了优化技术，包括循环展开、循环扁平化等，以提高加速器的性能。\n   - **动态分区和映射**：DRIPS通过动态分区和映射技术，根据每个阶段的执行状态调整流水线，从而缓解瓶颈，提高整体吞吐量。\n\n4. **Scale-HLS**:\n   - **高级优化和低级优化结合**：Scale-HLS在MLIR中执行高级优化，并生成注释C/C++代码，以指导其高级综合（HLS）后端。这种方法结合了高级优化和低级优化，提高了生成的FPGA设计的性能。\n   - **设计空间探索**：Scale-HLS提供了一种设计空间探索方法，以自动选择最佳的组合编译器优化和选项，从而生成高性能的生成设计。\n\n这些创新点共同推动了从高级编程框架到硬件加速器的高效映射，提高了机器学习模型在CGRA等可重构阵列上的执行性能。",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "请总结这些论文中提出的核心算法创新点。",
+    "queryparam": {
+      "mode": "global",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Core algorithm innovations, Academic research",
+      "ll_keywords": "Algorithm design, Innovative techniques, Theoretical contributions, Empirical studies",
+      "user_prompt": "",
+      "enable_rerank": true
+    },
+    "create_time": 1772619061,
+    "update_time": 1772619061,
+    "_id": "global:query:6740940bce0274e3e092604428c003ab"
   }
 }
