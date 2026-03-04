@@ -1,0 +1,41 @@
+{
+    "metadata": {
+        "timestamp": "2026-03-04 17:26:49",
+        "model": "qwen2.5:7b",
+        "rag_framework": "LightRAG-HKU"
+    },
+    "samples": [
+        {
+            "question": "什么是 CGRA 的动态重平衡机制？",
+            "answer": "DRIPS 提出了一种针对流水线流式应用的动态重平衡机制，通过在运行时监测吞吐量并调整 PE 分配解决负载不均问题。",
+            "contexts": [
+                "Section 3.2: Dynamic Rebalancing (DRIPS) is designed to handle throughput mismatch in pipelined applications...",
+                "Fig 4 shows the PE allocation strategy under varying workloads."
+            ],
+            "ground_truth": "DRIPS 框架通过动态调整处理器元素（PE）的分配来优化执行效率。",
+            "metrics": {
+                "faithfulness": 0.92,
+                "answer_relevancy": 0.88,
+                "context_precision": 0.85
+            }
+        },
+        {
+            "question": "VecPAC 如何实现精度感知的向量化？",
+            "answer": "VecPAC 通过支持变长向量指令集，根据算法需求自动切换 FP16 和 INT8 精度，降低功耗的同时保持计算效率。",
+            "contexts": [
+                "VecPAC architecture supports precision-aware vectorization by introducing a custom ISA extension..."
+            ],
+            "ground_truth": "VecPAC 是一种可以进行精度感知向量化的架构。",
+            "metrics": {
+                "faithfulness": 0.75,
+                "answer_relevancy": 0.9,
+                "context_precision": 0.6
+            }
+        }
+    ],
+    "summary_metrics": {
+        "mean_faithfulness": 0.835,
+        "mean_relevancy": 0.89,
+        "mean_context_precision": 0.725
+    }
+}
