@@ -1,0 +1,27 @@
+# 核心 GraphRAG (HKU版本)
+lightrag-hku>=1.0.1
+networkx>=3.0
+
+# 交互式推理与智能体依赖
+ollama>=0.3.3
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-ollama>=0.1.0
+
+# 评估与数据处理
+ragas>=0.1.15
+datasets>=2.19.0
+numpy>=1.24.0
+
+# PDF 解析 (推荐 PyMuPDF，即 fitz)
+pymupdf>=1.24.2
+pdfplumber>=0.11.0
+
+# 前端可视化
+streamlit>=1.35.0
+pyvis>=0.3.2
+streamlit-agraph>=0.0.45
+
+# 其他工具
+tqdm>=4.66.0
+requests>=2.31.0
