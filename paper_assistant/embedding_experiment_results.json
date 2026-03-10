@@ -1,0 +1,24 @@
+{
+    "detail": [
+        {
+            "case": 1,
+            "sim_raw": 0.6767140493409413,
+            "sim_clean": 0.7713545077220597,
+            "gain_percent": 13.985295336086159
+        },
+        {
+            "case": 2,
+            "sim_raw": 0.7550932233019432,
+            "sim_clean": 0.7702930624649523,
+            "gain_percent": 2.012975178950999
+        },
+        {
+            "case": 3,
+            "sim_raw": 0.746032354876642,
+            "sim_clean": 0.7409288951230805,
+            "gain_percent": -0.684080217191839
+        }
+    ],
+    "average_gain_percent": 5.104730099281773,
+    "conclusion": "\u901a\u8fc7\u7ed3\u6784\u5316\u89e3\u6790\uff0cEmbedding \u8bed\u4e49\u5339\u914d\u8d28\u91cf\u5e73\u5747\u63d0\u5347\u4e86 5.10%"
+}
