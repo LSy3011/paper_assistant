@@ -10,11 +10,17 @@ from lightrag.utils import EmbeddingFunc
 # 1. 基础配置
 WORKING_DIR = "./index_data"
 PDF_DIR = "./pdfs"
+CORPUS_DIR = "./corpus"
+# 自动创建 corpus 目录以防报错
+if not os.path.exists(CORPUS_DIR):
+    os.makedirs(CORPUS_DIR)
+    print(f"✅ 已为您自动创建论文存放目录: {CORPUS_DIR}")
+
 LLM_MODEL_NAME = "qwen2.5:7b"
 EMBEDDING_MODEL_NAME = "bge-m3:latest"
 OLLAMA_CTX = 32000
 
-from .specialized_parser import specialized_parser
+from specialized_parser import specialized_parser
 
 # 2. 增强型 PDF 解析函数 (NLP 简历亮点：语义化与 Markdown 转换)
 def parse_pdf_structured(file_path):
