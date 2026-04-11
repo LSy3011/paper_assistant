@@ -14,31 +14,15 @@ LLM_MODEL_NAME = "qwen2.5:7b"
 EMBEDDING_MODEL_NAME = "bge-m3:latest"
 OLLAMA_CTX = 32000
 
-# 2. 增强型 PDF 解析函数 (NLP 简历亮点：数据清洗)
+from .specialized_parser import specialized_parser
+
+# 2. 增强型 PDF 解析函数 (NLP 简历亮点：语义化与 Markdown 转换)
 def parse_pdf_structured(file_path):
     """
-    不仅提取文本，还进行初步的清洗：
-    1. 移除每页固定的页眉页脚（根据行位置判断，模拟逻辑）
-    2. 修复跨行单词断词（如 continuous-ly -> continuously）
-    3. 移除多余的空白符和特殊字符
+    调用高性能 Docling 引擎进行语义化解析，
+    自动处理表格、公式，并集成后置清洗逻辑。
     """
-    try:
-        text = ""
-        with fitz.open(file_path) as doc:
-            for page in doc:
-                page_text = page.get_text("text")
-                # 正则清洗：修复断词
-                page_text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', page_text)
-                # 移除页码 (简单示例: 匹配末尾数字)
-                page_text = re.sub(r'\n\d+\s*\n$', '\n', page_text)
-                text += page_text + "\n"
-        
-        # 移除过长的连续换行
-        text = re.sub(r'\n{3,}', '\n\n', text)
-        return text
-    except Exception as e:
-        print(f"❌ 解析 PDF 失败 {file_path}: {e}")
-        return None
+    return specialized_parser.parse(file_path)
 
 # 3. 推理函数 (增加 Rerank 逻辑说明)
 async def ollama_llm_func(prompt, system_prompt=None, history_messages=None, **kwargs):
