@@ -16,6 +16,8 @@ numpy>=1.24.0
 # PDF 解析 (推荐 PyMuPDF，即 fitz)
 pymupdf>=1.24.2
 pdfplumber>=0.11.0
+docling>=1.0.0
+
 
 # 前端可视化
 streamlit>=1.35.0
@@ -25,3 +27,5 @@ streamlit-agraph>=0.0.45
 # 其他工具
 tqdm>=4.66.0
 requests>=2.31.0
+loguru>=0.7.2
+

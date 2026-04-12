@@ -18,31 +18,55 @@ class SpecializedParser:
     def parse(self, file_path: str) -> str:
         """
         解析 PDF 并转换为增强型 Markdown
+        尝试使用 Docling，失败或不可用时降级到 PyMuPDF (fitz)
         """
-        if not self.converter:
-            return ""
+        # 1. 尝试使用 Docling
+        if self.converter:
+            try:
+                logger.info(f"正在使用 Docling 解析: {file_path}")
+                result = self.converter.convert(file_path)
+                markdown_text = result.document.export_to_markdown()
+                
+                # 增强清洗逻辑
+                markdown_text = self._clean_text(markdown_text)
+                return markdown_text
+            except Exception as e:
+                logger.error(f"Docling 解析过程中出错，准备切换备选引擎: {e}")
 
+        # 2. 兜底法：使用 PyMuPDF (fitz)
+        return self.parse_with_fitz(file_path)
+
+    def parse_with_fitz(self, file_path: str) -> str:
+        """
+        备选解析引擎：基于 PyMuPDF 提取纯文本
+        优点：无需模型，离线稳健
+        """
         try:
-            logger.info(f"正在使用 Docling 解析: {file_path}")
-            # 1. 语义化转换
-            result = self.converter.convert(file_path)
-            markdown_text = result.document.export_to_markdown()
-
-            # 2. 继承并增强原有的清洗逻辑
-            # A. 修复断词 (如 continuous-\nly -> continuously)
-            markdown_text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', markdown_text)
-            # B. 修复带空格的断词
-            markdown_text = re.sub(r'(\w+)-\s*\n\s*(\w+)', r'\1\2', markdown_text)
-            # C. 移除 3 个及以上的连续换行，保持布局整洁
-            markdown_text = re.sub(r'\n{3,}', '\n\n', markdown_text)
+            import fitz
+            logger.info(f"🚀 正在使用 PyMuPDF (fitz) 备选引擎解析: {file_path}")
+            doc = fitz.open(file_path)
+            full_text = ""
+            for i, page in enumerate(doc):
+                # 提取带布局的文本
+                text = page.get_text("text")
+                full_text += f"\n\n### Page {i+1}\n\n" + text
             
-            # D. (可选) 针对 LaTeX 特殊处理
-            # Docling 默认输出标准的 Markdown 表格和 LaTeX 公式
-            
-            return markdown_text
+            doc.close()
+            return self._clean_text(full_text)
         except Exception as e:
-            logger.error(f"Docling 解析失败 {file_path}: {e}")
+            logger.error(f"PyMuPDF 解析也失败了: {e}")
             return ""
+
+    def _clean_text(self, text: str) -> str:
+        """集中处理文本清洗逻辑"""
+        import re
+        # A. 修复断词 (如 continuous-\nly -> continuously)
+        text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', text)
+        # B. 修复带空格的断词
+        text = re.sub(r'(\w+)-\s*\n\s*(\w+)', r'\1\2', text)
+        # C. 移除 3 个及以上的连续换行
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        return text
 
 # 单例模式
 specialized_parser = SpecializedParser()

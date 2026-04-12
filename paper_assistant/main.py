@@ -86,19 +86,35 @@ async def main():
 
     files = [f for f in os.listdir(PDF_DIR) if f.endswith(".pdf")]
     
+    if not files:
+        print(f"⚠️ 在 {PDF_DIR} 目录下没有找到 PDF 文件。请确认你的论文存放在该位置。")
+    
     for f in files:
-        print(f"\n📄 结构化处理并注入: {f}")
+        print(f"\n📄 处理中: {f}")
         content = parse_pdf_structured(os.path.join(PDF_DIR, f))
-        if content:
+        if content and len(content.strip()) > 50: # 过滤掉解析太短的内容
             await rag.ainsert(content)
-            print(f"✅ 完成")
+            print(f"✅ 内容已注入知识图谱")
+        else:
+            print(f"⚠️ 解析内容过短或为空，跳过注入。")
 
     # 5. 带有思考链的查询示例
     query = "请分析这些论文对于 CGRA 编译效率的改进方法，并给出推理理由。"
-    print(f"\n❓ 复杂查询: {query}")
-    # 使用混合检索 (Vector + Graph) 以获得最佳效果
-    result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
-    print(f"\n✨ 生成回答:\n{result}")
+    print(f"\n❓ 综合查询: {query}")
+    
+    try:
+        # 增加防御性：如果知识图谱完全为空，aquery 可能会触发内部错误
+        # 使用 hybrid 模式获得最佳效果
+        result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
+        
+        if not result or result == "I am sorry, but I don't have the message history yet":
+            print("\n✨ 回答: 抱歉，当前知识库中没有足够的背景信息来回答该问题。请确保 PDF 已成功解析并注入。")
+        else:
+            print(f"\n✨ 生成回答:\n{result}")
+            
+    except Exception as e:
+        print(f"\n❌ 查询失败: {e}")
+        print("💡 提示: 这通常是因为知识库中没有有效数据，或者 LLM 返回了不符合预期的响应。")
 
 if __name__ == "__main__":
     asyncio.run(main())
