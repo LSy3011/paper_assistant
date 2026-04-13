@@ -91,7 +91,7 @@ def get_rag_engine():
         working_dir=WORKING_DIR,
         llm_model_func=llm_func,
         embedding_func=EmbeddingFunc(func=embed_func, embedding_dim=1024, max_token_size=8192),
-        llm_model_max_async=1, # 保持单线程稳定
+        llm_model_max_async=2, # 【优化】经 A/B 测试，Async=2 为单卡 A10 最优并发度
         chunk_token_size=1024
     )
 

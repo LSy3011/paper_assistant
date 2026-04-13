@@ -1,8 +1,14 @@
 import os
 import re
 
-# 目标目录：你 LightRAG 源码的真实位置
-TARGET_DIR = "/mnt/workspace/LightRAG/lightrag"
+# 目标目录：自动搜寻你 LightRAG 源码的真实位置
+try:
+    import lightrag
+    TARGET_DIR = os.path.dirname(lightrag.__file__)
+except ImportError:
+    print("❌ 错误：未在当前 Python 环境中找到 lightrag 库。")
+    print("💡 请先运行: pip install lightrag-hku")
+    exit(1)
 
 def search_and_destroy():
     print(f"🚀 开始扫描目录: {TARGET_DIR} ...")

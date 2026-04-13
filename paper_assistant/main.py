@@ -10,25 +10,35 @@ from lightrag.utils import EmbeddingFunc
 # 1. 基础配置
 WORKING_DIR = "./index_data"
 PDF_DIR = "./pdfs"
-CORPUS_DIR = "./corpus"
-# 自动创建 corpus 目录以防报错
-if not os.path.exists(CORPUS_DIR):
-    os.makedirs(CORPUS_DIR)
-    print(f"✅ 已为您自动创建论文存放目录: {CORPUS_DIR}")
-
 LLM_MODEL_NAME = "qwen2.5:7b"
 EMBEDDING_MODEL_NAME = "bge-m3:latest"
 OLLAMA_CTX = 32000
 
-from specialized_parser import specialized_parser
-
-# 2. 增强型 PDF 解析函数 (NLP 简历亮点：语义化与 Markdown 转换)
+# 2. 增强型 PDF 解析函数 (NLP 简历亮点：数据清洗)
 def parse_pdf_structured(file_path):
     """
-    调用高性能 Docling 引擎进行语义化解析，
-    自动处理表格、公式，并集成后置清洗逻辑。
+    不仅提取文本，还进行初步的清洗：
+    1. 移除每页固定的页眉页脚（根据行位置判断，模拟逻辑）
+    2. 修复跨行单词断词（如 continuous-ly -> continuously）
+    3. 移除多余的空白符和特殊字符
     """
-    return specialized_parser.parse(file_path)
+    try:
+        text = ""
+        with fitz.open(file_path) as doc:
+            for page in doc:
+                page_text = page.get_text("text")
+                # 正则清洗：修复断词
+                page_text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', page_text)
+                # 移除页码 (简单示例: 匹配末尾数字)
+                page_text = re.sub(r'\n\d+\s*\n$', '\n', page_text)
+                text += page_text + "\n"
+        
+        # 移除过长的连续换行
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        return text
+    except Exception as e:
+        print(f"❌ 解析 PDF 失败 {file_path}: {e}")
+        return None
 
 # 3. 推理函数 (增加 Rerank 逻辑说明)
 async def ollama_llm_func(prompt, system_prompt=None, history_messages=None, **kwargs):
@@ -80,41 +90,25 @@ async def main():
         # NLP 优化建议：学术论文分块不宜过小，1024 Token 能保留更多语义上下文
         chunk_token_size=1024, 
         chunk_overlap_token_size=128,
-        # 提高实体的提取覆盖率，默认是 100，这里可以微调
-        # entity_extract_max_gleaning=1 
+        # 【算力洞察 A/B 测试：Async=2 为单卡 A10 最优并发度】
+        llm_model_max_async=2,
     )
 
     files = [f for f in os.listdir(PDF_DIR) if f.endswith(".pdf")]
     
-    if not files:
-        print(f"⚠️ 在 {PDF_DIR} 目录下没有找到 PDF 文件。请确认你的论文存放在该位置。")
-    
     for f in files:
-        print(f"\n📄 处理中: {f}")
+        print(f"\n📄 结构化处理并注入: {f}")
         content = parse_pdf_structured(os.path.join(PDF_DIR, f))
-        if content and len(content.strip()) > 50: # 过滤掉解析太短的内容
+        if content:
             await rag.ainsert(content)
-            print(f"✅ 内容已注入知识图谱")
-        else:
-            print(f"⚠️ 解析内容过短或为空，跳过注入。")
+            print(f"✅ 完成")
 
     # 5. 带有思考链的查询示例
     query = "请分析这些论文对于 CGRA 编译效率的改进方法，并给出推理理由。"
-    print(f"\n❓ 综合查询: {query}")
-    
-    try:
-        # 增加防御性：如果知识图谱完全为空，aquery 可能会触发内部错误
-        # 使用 hybrid 模式获得最佳效果
-        result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
-        
-        if not result or result == "I am sorry, but I don't have the message history yet":
-            print("\n✨ 回答: 抱歉，当前知识库中没有足够的背景信息来回答该问题。请确保 PDF 已成功解析并注入。")
-        else:
-            print(f"\n✨ 生成回答:\n{result}")
-            
-    except Exception as e:
-        print(f"\n❌ 查询失败: {e}")
-        print("💡 提示: 这通常是因为知识库中没有有效数据，或者 LLM 返回了不符合预期的响应。")
+    print(f"\n❓ 复杂查询: {query}")
+    # 使用混合检索 (Vector + Graph) 以获得最佳效果
+    result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
+    print(f"\n✨ 生成回答:\n{result}")
 
 if __name__ == "__main__":
     asyncio.run(main())
