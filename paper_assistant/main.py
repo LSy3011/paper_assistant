@@ -1,44 +1,48 @@
 import os
 import asyncio
-import fitz
 import numpy as np
 import ollama
-import re
 from lightrag import LightRAG, QueryParam
 from lightrag.utils import EmbeddingFunc
 
-# 1. 基础配置
-WORKING_DIR = "./index_data"
-PDF_DIR = "./pdfs"
-LLM_MODEL_NAME = "qwen2.5:7b"
-EMBEDDING_MODEL_NAME = "bge-m3:latest"
-OLLAMA_CTX = 32000
+try:
+    from .config import (
+        CHUNK_OVERLAP_TOKEN_SIZE,
+        CHUNK_TOKEN_SIZE,
+        EMBEDDING_DIM,
+        EMBEDDING_MODEL_NAME,
+        LLM_MODEL_MAX_ASYNC,
+        LLM_MODEL_NAME,
+        MAX_TOKEN_SIZE,
+        OLLAMA_CTX,
+        OLLAMA_TEMPERATURE,
+        PDF_DIR,
+        WORKING_DIR,
+    )
+    from .specialized_parser import specialized_parser
+except ImportError:
+    from config import (
+        CHUNK_OVERLAP_TOKEN_SIZE,
+        CHUNK_TOKEN_SIZE,
+        EMBEDDING_DIM,
+        EMBEDDING_MODEL_NAME,
+        LLM_MODEL_MAX_ASYNC,
+        LLM_MODEL_NAME,
+        MAX_TOKEN_SIZE,
+        OLLAMA_CTX,
+        OLLAMA_TEMPERATURE,
+        PDF_DIR,
+        WORKING_DIR,
+    )
+    from specialized_parser import specialized_parser
 
-# 2. 增强型 PDF 解析函数 (NLP 简历亮点：数据清洗)
+# 2. 增强型 PDF 解析函数 (NLP 简历亮点：语义化与 Markdown 转换)
 def parse_pdf_structured(file_path):
     """
-    不仅提取文本，还进行初步的清洗：
-    1. 移除每页固定的页眉页脚（根据行位置判断，模拟逻辑）
-    2. 修复跨行单词断词（如 continuous-ly -> continuously）
-    3. 移除多余的空白符和特殊字符
+    调用高性能 Docling 引擎进行语义化解析，
+    自动处理表格、公式，并集成后置清洗逻辑。
     """
-    try:
-        text = ""
-        with fitz.open(file_path) as doc:
-            for page in doc:
-                page_text = page.get_text("text")
-                # 正则清洗：修复断词
-                page_text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', page_text)
-                # 移除页码 (简单示例: 匹配末尾数字)
-                page_text = re.sub(r'\n\d+\s*\n$', '\n', page_text)
-                text += page_text + "\n"
-        
-        # 移除过长的连续换行
-        text = re.sub(r'\n{3,}', '\n\n', text)
-        return text
-    except Exception as e:
-        print(f"❌ 解析 PDF 失败 {file_path}: {e}")
-        return None
+    return specialized_parser.parse(file_path)
 
 # 3. 推理函数 (增加 Rerank 逻辑说明)
 async def ollama_llm_func(prompt, system_prompt=None, history_messages=None, **kwargs):
@@ -53,7 +57,7 @@ async def ollama_llm_func(prompt, system_prompt=None, history_messages=None, **k
             ollama.chat,
             model=LLM_MODEL_NAME,
             messages=messages,
-            options={"num_ctx": OLLAMA_CTX, "temperature": 0.1}
+            options={"num_ctx": OLLAMA_CTX, "temperature": OLLAMA_TEMPERATURE}
         )
         return response["message"]["content"]
     except Exception as e:
@@ -69,8 +73,9 @@ async def ollama_embedding_func(texts):
                 ollama.embeddings, model=EMBEDDING_MODEL_NAME, prompt=text
             )
             embeddings.append(response["embedding"])
-        except:
-            embeddings.append([0.0] * 1024)
+        except Exception as e:
+            print(f"⚠️ Embedding 调用失败，使用零向量兜底: {e}")
+            embeddings.append([0.0] * EMBEDDING_DIM)
     return np.array(embeddings)
 
 # 4. 主流程
@@ -80,18 +85,19 @@ async def main():
 
     print("🔧 启动 LightRAG (优化版)...")
     rag = LightRAG(
-        working_dir=WORKING_DIR,
+        working_dir=str(WORKING_DIR),
         llm_model_func=ollama_llm_func,
         embedding_func=EmbeddingFunc(
             func=ollama_embedding_func,
-            embedding_dim=1024,
-            max_token_size=8192,
+            embedding_dim=EMBEDDING_DIM,
+            max_token_size=MAX_TOKEN_SIZE,
         ),
         # NLP 优化建议：学术论文分块不宜过小，1024 Token 能保留更多语义上下文
-        chunk_token_size=1024, 
-        chunk_overlap_token_size=128,
-        # 【算力洞察 A/B 测试：Async=2 为单卡 A10 最优并发度】
-        llm_model_max_async=2,
+        chunk_token_size=CHUNK_TOKEN_SIZE,
+        chunk_overlap_token_size=CHUNK_OVERLAP_TOKEN_SIZE,
+        llm_model_max_async=LLM_MODEL_MAX_ASYNC,
+        # 提高实体的提取覆盖率，默认是 100，这里可以微调
+        # entity_extract_max_gleaning=1 
     )
 
     files = [f for f in os.listdir(PDF_DIR) if f.endswith(".pdf")]

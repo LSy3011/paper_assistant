@@ -2,12 +2,14 @@ import networkx as nx
 from pyvis.network import Network
 import os
 import json
+from pathlib import Path
 
 # ===========================
 # 配置路径
 # ===========================
-GRAPH_FILE = "./index_data/graph_chunk_entity_relation.graphml"
-OUTPUT_FILE = "knowledge_graph_offline.html"
+BASE_DIR = Path(__file__).resolve().parent
+GRAPH_FILE = BASE_DIR / "index_data" / "graph_chunk_entity_relation.graphml"
+OUTPUT_FILE = BASE_DIR / "knowledge_graph_offline.html"
 
 def main():
     # 1. 检查文件是否存在
@@ -89,7 +91,7 @@ def main():
     # 5. 保存并生成
     print(f"💾 正在生成离线 HTML 文件: {OUTPUT_FILE} ...")
     try:
-        net.save_graph(OUTPUT_FILE)
+        net.save_graph(str(OUTPUT_FILE))
         print(f"\n✅ 成功！文件已生成: {os.path.abspath(OUTPUT_FILE)}")
         print("👉 请在左侧文件浏览器中，右键点击 'knowledge_graph_offline.html' -> 下载 (Download)")
         print("👉 然后在本地浏览器双击打开，即可秒开且无需联网。")

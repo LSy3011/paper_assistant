@@ -7,6 +7,31 @@ from lightrag.utils import EmbeddingFunc
 import ollama
 import numpy as np
 
+try:
+    from .config import (
+        CHUNK_TOKEN_SIZE,
+        EMBEDDING_DIM,
+        EMBEDDING_MODEL_NAME,
+        LLM_MODEL_MAX_ASYNC,
+        LLM_MODEL_NAME,
+        MAX_TOKEN_SIZE,
+        OLLAMA_CTX,
+        PDF_DIR,
+        WORKING_DIR,
+    )
+except ImportError:
+    from config import (
+        CHUNK_TOKEN_SIZE,
+        EMBEDDING_DIM,
+        EMBEDDING_MODEL_NAME,
+        LLM_MODEL_MAX_ASYNC,
+        LLM_MODEL_NAME,
+        MAX_TOKEN_SIZE,
+        OLLAMA_CTX,
+        PDF_DIR,
+        WORKING_DIR,
+    )
+
 # 设置日志级别，减少干扰
 logging.basicConfig(level=logging.INFO)
 
@@ -23,12 +48,12 @@ with st.sidebar:
     st.title("🎓 知识库控制台")
     
     # 检查数据目录
-    if os.path.exists("./index_data") and len(os.listdir("./index_data")) > 0:
+    if os.path.exists(WORKING_DIR) and len(os.listdir(WORKING_DIR)) > 0:
         st.success(f"✅ 知识库数据就绪")
         
         # 显示已索引文件
-        if os.path.exists("./pdfs"):
-            files = [f for f in os.listdir("./pdfs") if f.endswith(".pdf")]
+        if os.path.exists(PDF_DIR):
+            files = [f for f in os.listdir(PDF_DIR) if f.endswith(".pdf")]
             with st.expander(f"📚 已索引论文 ({len(files)})", expanded=True):
                 for f in files:
                     st.caption(f"📄 {f}")
@@ -54,8 +79,6 @@ for message in st.session_state.messages:
 # --- RAG 初始化函数 (核心修复版) ---
 @st.cache_resource
 def get_rag_engine():
-    WORKING_DIR = "./index_data"
-    
     # 定义 Ollama 适配器
     async def llm_func(prompt, system_prompt=None, history_messages=None, **kwargs):
         messages = []
@@ -66,9 +89,9 @@ def get_rag_engine():
         try:
             response = await asyncio.to_thread(
                 ollama.chat, 
-                model="qwen2.5:7b", 
+                model=LLM_MODEL_NAME,
                 messages=messages, 
-                options={"num_ctx": 32000, "temperature": 0.3}
+                options={"num_ctx": OLLAMA_CTX, "temperature": 0.3}
             )
             return response["message"]["content"]
         except Exception as e:
@@ -80,19 +103,20 @@ def get_rag_engine():
         embeddings = []
         for text in texts:
             try:
-                res = await asyncio.to_thread(ollama.embeddings, model="bge-m3:latest", prompt=text)
+                res = await asyncio.to_thread(ollama.embeddings, model=EMBEDDING_MODEL_NAME, prompt=text)
                 embeddings.append(res["embedding"])
-            except:
-                embeddings.append([0.0] * 1024)
+            except Exception as e:
+                print(f"Embedding Error: {e}")
+                embeddings.append([0.0] * EMBEDDING_DIM)
         return np.array(embeddings)
 
     # 创建实例
     rag = LightRAG(
-        working_dir=WORKING_DIR,
+        working_dir=str(WORKING_DIR),
         llm_model_func=llm_func,
-        embedding_func=EmbeddingFunc(func=embed_func, embedding_dim=1024, max_token_size=8192),
-        llm_model_max_async=2, # 【优化】经 A/B 测试，Async=2 为单卡 A10 最优并发度
-        chunk_token_size=1024
+        embedding_func=EmbeddingFunc(func=embed_func, embedding_dim=EMBEDDING_DIM, max_token_size=MAX_TOKEN_SIZE),
+        llm_model_max_async=LLM_MODEL_MAX_ASYNC,
+        chunk_token_size=CHUNK_TOKEN_SIZE
     )
 
     # 【关键修复】手动创建循环来初始化存储

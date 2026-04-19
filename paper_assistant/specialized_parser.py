@@ -19,30 +19,37 @@ class SpecializedParser:
         """
         解析 PDF 并转换为增强型 Markdown
         """
-        if not self.converter:
-            return ""
-
         try:
-            logger.info(f"正在使用 Docling 解析: {file_path}")
-            # 1. 语义化转换
-            result = self.converter.convert(file_path)
-            markdown_text = result.document.export_to_markdown()
+            if self.converter:
+                logger.info(f"正在使用 Docling 解析: {file_path}")
+                result = self.converter.convert(file_path)
+                return self._clean_text(result.document.export_to_markdown())
 
-            # 2. 继承并增强原有的清洗逻辑
-            # A. 修复断词 (如 continuous-\nly -> continuously)
-            markdown_text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', markdown_text)
-            # B. 修复带空格的断词
-            markdown_text = re.sub(r'(\w+)-\s*\n\s*(\w+)', r'\1\2', markdown_text)
-            # C. 移除 3 个及以上的连续换行，保持布局整洁
-            markdown_text = re.sub(r'\n{3,}', '\n\n', markdown_text)
-            
-            # D. (可选) 针对 LaTeX 特殊处理
-            # Docling 默认输出标准的 Markdown 表格和 LaTeX 公式
-            
-            return markdown_text
+            logger.warning(f"Docling 不可用，改用 PyMuPDF 兜底解析: {file_path}")
+            return self._parse_with_pymupdf(file_path)
         except Exception as e:
-            logger.error(f"Docling 解析失败 {file_path}: {e}")
+            logger.error(f"Docling 解析失败，改用 PyMuPDF 兜底 {file_path}: {e}")
+            return self._parse_with_pymupdf(file_path)
+
+    def _parse_with_pymupdf(self, file_path: str) -> str:
+        try:
+            import fitz
+
+            text_parts = []
+            with fitz.open(file_path) as doc:
+                for page in doc:
+                    text_parts.append(page.get_text("text"))
+            return self._clean_text("\n".join(text_parts))
+        except Exception as e:
+            logger.error(f"PyMuPDF 兜底解析失败 {file_path}: {e}")
             return ""
+
+    @staticmethod
+    def _clean_text(text: str) -> str:
+        text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', text)
+        text = re.sub(r'(\w+)-\s*\n\s*(\w+)', r'\1\2', text)
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        return text.strip()
 
 # 单例模式
 specialized_parser = SpecializedParser()

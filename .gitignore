@@ -2,12 +2,16 @@
 venv/
 env/
 *.env/
+.env
 
 # 缓存/数据文件
 paper_assistant/index_data/*.json
 
 # Python缓存文件
 __pycache__/
+**/__pycache__/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
 *.py[cod]
 *.class
 *.so
