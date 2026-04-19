@@ -13,7 +13,7 @@ try:
         PDF_DIR,
         WORKING_DIR,
     )
-    from .main import ollama_embedding_func, ollama_llm_func
+    from .main import finalize_lightrag, initialize_lightrag, ollama_embedding_func, ollama_llm_func
 except ImportError:
     from config import (
         EMBEDDING_DIM,
@@ -21,7 +21,7 @@ except ImportError:
         PDF_DIR,
         WORKING_DIR,
     )
-    from main import ollama_embedding_func, ollama_llm_func
+    from main import finalize_lightrag, initialize_lightrag, ollama_embedding_func, ollama_llm_func
 
 
 def list_papers():
@@ -60,18 +60,23 @@ def paper_search(query, top_k=5):
 
 
 async def paper_ask(question, mode="hybrid"):
-    rag = LightRAG(
-        working_dir=str(WORKING_DIR),
-        llm_model_func=ollama_llm_func,
-        embedding_func=EmbeddingFunc(
-            func=ollama_embedding_func,
-            embedding_dim=EMBEDDING_DIM,
-            max_token_size=MAX_TOKEN_SIZE,
-        ),
-    )
-    await rag.initialize_storages()
-    answer = await rag.aquery(question, param=QueryParam(mode=mode))
-    return {"question": question, "mode": mode, "answer": answer}
+    rag = None
+    try:
+        rag = LightRAG(
+            working_dir=str(WORKING_DIR),
+            llm_model_func=ollama_llm_func,
+            embedding_func=EmbeddingFunc(
+                func=ollama_embedding_func,
+                embedding_dim=EMBEDDING_DIM,
+                max_token_size=MAX_TOKEN_SIZE,
+            ),
+        )
+        await initialize_lightrag(rag)
+        answer = await rag.aquery(question, param=QueryParam(mode=mode))
+        return {"question": question, "mode": mode, "answer": answer}
+    finally:
+        if rag is not None:
+            await finalize_lightrag(rag)
 
 
 def graph_neighbors(entity, depth=1):

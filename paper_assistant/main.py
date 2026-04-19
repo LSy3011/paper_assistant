@@ -7,6 +7,11 @@ from lightrag import LightRAG, QueryParam
 from lightrag.utils import EmbeddingFunc
 
 try:
+    from lightrag.kg.shared_storage import initialize_pipeline_status
+except Exception:
+    initialize_pipeline_status = None
+
+try:
     from .config import (
         CHUNK_OVERLAP_TOKEN_SIZE,
         CHUNK_TOKEN_SIZE,
@@ -44,6 +49,24 @@ except ImportError:
 
 def parse_pdf_structured(file_path):
     return specialized_parser.parse(file_path)
+
+
+async def initialize_lightrag(rag):
+    """Initialize LightRAG storage lifecycle for current and older releases."""
+    await rag.initialize_storages()
+    if initialize_pipeline_status is not None:
+        try:
+            await initialize_pipeline_status()
+        except TypeError:
+            # Some LightRAG versions expose the symbol but do not need explicit args.
+            pass
+    return rag
+
+
+async def finalize_lightrag(rag):
+    finalize = getattr(rag, "finalize_storages", None)
+    if callable(finalize):
+        await finalize()
 
 
 async def ollama_llm_func(prompt, system_prompt=None, history_messages=None, **kwargs):
@@ -123,29 +146,35 @@ async def main():
     print(f"PDF dir: {PDF_DIR}")
     print(f"Index dir: {WORKING_DIR}")
 
-    rag = LightRAG(
-        working_dir=str(WORKING_DIR),
-        llm_model_func=ollama_llm_func,
-        embedding_func=EmbeddingFunc(
-            func=ollama_embedding_func,
-            embedding_dim=EMBEDDING_DIM,
-            max_token_size=MAX_TOKEN_SIZE,
-        ),
-        chunk_token_size=CHUNK_TOKEN_SIZE,
-        chunk_overlap_token_size=CHUNK_OVERLAP_TOKEN_SIZE,
-        llm_model_max_async=LLM_MODEL_MAX_ASYNC,
-    )
+    rag = None
+    try:
+        rag = LightRAG(
+            working_dir=str(WORKING_DIR),
+            llm_model_func=ollama_llm_func,
+            embedding_func=EmbeddingFunc(
+                func=ollama_embedding_func,
+                embedding_dim=EMBEDDING_DIM,
+                max_token_size=MAX_TOKEN_SIZE,
+            ),
+            chunk_token_size=CHUNK_TOKEN_SIZE,
+            chunk_overlap_token_size=CHUNK_OVERLAP_TOKEN_SIZE,
+            llm_model_max_async=LLM_MODEL_MAX_ASYNC,
+        )
+        await initialize_lightrag(rag)
 
-    if should_ingest_pdfs():
-        await ingest_pdfs(rag)
-    else:
-        print("Existing LightRAG index detected; skipping PDF ingestion.")
-        print("Set PAPER_ASSISTANT_INGEST_MODE=always to rebuild, or skip to force query-only mode.")
+        if should_ingest_pdfs():
+            await ingest_pdfs(rag)
+        else:
+            print("Existing LightRAG index detected; skipping PDF ingestion.")
+            print("Set PAPER_ASSISTANT_INGEST_MODE=always to rebuild, or skip to force query-only mode.")
 
-    query = "请分析这些论文对 CGRA 编译效率的改进方法，并给出推理理由。"
-    print(f"\nQuery: {query}")
-    result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
-    print(f"\nAnswer:\n{result}")
+        query = "Please analyze how these papers improve CGRA compilation efficiency and give the reasoning."
+        print(f"\nQuery: {query}")
+        result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
+        print(f"\nAnswer:\n{result}")
+    finally:
+        if rag is not None:
+            await finalize_lightrag(rag)
 
 
 if __name__ == "__main__":

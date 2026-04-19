@@ -8,6 +8,11 @@ import ollama
 import numpy as np
 
 try:
+    from lightrag.kg.shared_storage import initialize_pipeline_status
+except Exception:
+    initialize_pipeline_status = None
+
+try:
     from .config import (
         CHUNK_TOKEN_SIZE,
         EMBEDDING_DIM,
@@ -126,6 +131,8 @@ def get_rag_engine():
         asyncio.set_event_loop(loop)
         print("⚙️ 正在加载知识库数据 (Initialize Storages)...")
         loop.run_until_complete(rag.initialize_storages())
+        if initialize_pipeline_status is not None:
+            loop.run_until_complete(initialize_pipeline_status())
         print("✅ 知识库加载完成！")
         loop.close()
     except Exception as e:
