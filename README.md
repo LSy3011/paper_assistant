@@ -1,47 +1,143 @@
-# Paper Assistant (基于知识图谱的论文问答助手)
+# Paper Assistant
 
-## 项目简介
+本项目是一个本地化论文知识库与 GraphRAG 问答系统，面向学术论文、行业报告和长文档知识管理场景。系统基于 LightRAG、Ollama 和 BGE-M3 构建向量索引与知识图谱索引，支持论文问答、跨论文比较、图谱邻居查询、Streamlit Web 交互和 MCP/CLI 工具化调用。
 
-**Paper Assistant** 是一个本地化的知识库问答系统，专为学术论文设计。它不仅仅是一个简单的文档检索工具，而是通过构建 **知识图谱 (Knowledge Graph)** 来理解论文中的实体（Entities）及其关系（Relations），提供更深度的上下文理解和可视化展示。
+## 项目定位
 
-该项目基于 LightRAG 架构，支持从非结构化 PDF 文本到结构化图谱的自动构建、本地化存储以及交互式可视化。
+Paper Assistant 解决的是“专业文档如何沉淀为可检索、可问答、可被 Agent 调用的知识服务”的问题。
 
-## 核心功能
+它和 Second Agent 的分工是：
 
-* **PDF 论文解析与索引**：自动处理 `pdfs/` 目录下的学术论文，提取文本内容。
-* **知识图谱构建**：利用 LLM 提取论文中的关键概念（如技术术语、架构名称）及其相互关系，构建本地知识图谱。
-* **混合检索 (Hybrid RAG)**：结合向量检索（Vector Search）和图谱检索（Graph Search）来回答用户问题。
-* **量化评估 (Advanced)**：引入 Ragas 评估指标，从 Faithfulness 和 Context Precision 角度对 RAG 效果进行科学量化。
-* **交互式可视化**：生成 HTML 格式的知识图谱可视化文件，支持离线查看。
-* **本地化部署**：支持完全离线运行（依赖本地 LLM 和 Embedding 模型）。
+- Paper Assistant：知识库基础设施，负责 PDF 解析、索引构建、GraphRAG 查询和 MCP 工具暴露。
+- Second Agent：上层 Agent runtime，负责长期记忆、Skill 调用、工具选择和推理轨迹。
 
-## 文件结构说明
+组合后可以形成“领域知识库 + 个性化 Agent”的架构，适用于科研阅读助手、行业研究助手、职业规划顾问、旅游规划或美妆知识顾问等场景。
 
-项目主要文件如下：
+## 已验证能力
+
+服务器验证结果：
+
+- 已加载论文知识图谱：约 1070 个节点、881 条关系。
+- 已加载文本块：70 个 chunks。
+- 支持 `hybrid` GraphRAG 查询并生成回答。
+- 支持 Streamlit Web 页面问答。
+- 支持 GraphML 离线可视化 HTML 生成。
+- 支持 MCP/CLI fallback 工具：`list_papers`、`paper_ask`、`graph_neighbors`。
+
+## 技术栈
+
+- Python
+- LightRAG-HKU
+- Ollama
+- Qwen2.5-7B
+- BGE-M3
+- PyMuPDF
+- Docling
+- Streamlit
+- NetworkX / PyVis
+- MCP/CLI
+
+## 目录结构
 
 ```text
-paper_assistant/
-├── app.py                  # [Web 应用入口] 基于 Streamlit 的交互式前端
-├── main.py                 # [核心逻辑] 主程序入口，执行索引构建
-├── eval_ragas.py           # [量化评估] 针对召回精度和回答质量的评估脚本
-├── DEBUG_REPORT.md         # [故障报告] 针对 360s 超时死锁的深度溯源分析报告
-├── visualize.py            # [可视化脚本] 用于读取索引数据并生成可视化 HTML
-├── pdfs/                   # [数据源] 存放待处理的 PDF 论文
-├── index_data/             # [持久化存储] 存放构建好的索引、向量库和图谱数据
+.
+├── paper_assistant/
+│   ├── main.py                 # CLI GraphRAG 查询与索引构建入口
+│   ├── app.py                  # Streamlit Web 问答
+│   ├── mcp_server.py           # MCP Server / CLI fallback
+│   ├── health_check.py         # 环境与索引健康检查
+│   ├── specialized_parser.py   # PyMuPDF / Docling 可切换 PDF 解析器
+│   ├── visualize.py            # GraphML 离线可视化
+│   ├── pdfs/                   # 示例论文 PDF
+│   └── index_data/             # 已验证的 LightRAG 示例索引
+├── docs/
+│   ├── PAPER_ASSISTANT_BUILD_GUIDE.md
+│   ├── PAPER_ASSISTANT_SERVER_FAST_MODE.md
+│   ├── MCP_AND_SKILL_EXTENSION_PLAN.md
+│   └── mcp_tool_contracts/
+├── .env.example
+├── requirements.txt
+└── USAGE_GUIDE.md
 ```
 
-## 快速开始
+## 快速运行
 
-### 1. 环境准备
-确保已安装 Python 及 `lightrag`, `ragas`, `streamlit` 等依赖。
+服务器已有虚拟环境时：
 
-### 2. 构建与运行
-1. 将 PDF 放入 `pdfs/`。
-2. 运行 `python main.py` 构建索引。
-3. 运行 `python eval_ragas.py` 进行效果评估。
-4. 启动应用：`streamlit run app.py`。
+```bash
+cd /mnt/workspace/paper_assistant/paper_assistant
+source venv/bin/activate
+```
 
-## 注意事项
+健康检查：
 
-* 如果遇到系统挂起或超时问题，请务必阅读 `DEBUG_REPORT.md`。
-* 评估模块 `eval_ragas.py` 需要安装 `ragas` 库。
+```bash
+python paper_assistant/health_check.py
+```
+
+查询已有索引：
+
+```bash
+export PAPER_ASSISTANT_INGEST_MODE=skip
+python paper_assistant/main.py
+```
+
+启动 Web 页面：
+
+```bash
+streamlit run paper_assistant/app.py --server.address 0.0.0.0 --server.port 8501
+```
+
+生成图谱可视化：
+
+```bash
+python paper_assistant/visualize.py
+```
+
+## MCP/CLI 工具
+
+列出论文：
+
+```bash
+python paper_assistant/mcp_server.py list_papers
+```
+
+论文问答：
+
+```bash
+python paper_assistant/mcp_server.py paper_ask "Only based on the indexed papers, compare ML-CGRA, VecPAC and DRIPS." --mode hybrid
+```
+
+图谱邻居查询：
+
+```bash
+python paper_assistant/mcp_server.py graph_neighbors CGRA --depth 1
+```
+
+## 关键配置
+
+复制 `.env.example` 为 `.env` 后可调整：
+
+```env
+PAPER_ASSISTANT_PARSE_BACKEND=pymupdf
+PAPER_ASSISTANT_ENABLE_OCR=0
+PAPER_ASSISTANT_INGEST_MODE=auto
+OLLAMA_LLM_MODEL=qwen2.5:7b
+OLLAMA_EMBED_MODEL=bge-m3:latest
+```
+
+解析模式：
+
+- `pymupdf`：默认快速模式，适合服务器演示。
+- `docling`：高精度解析，适合表格/公式/版式要求高的 PDF，但首次运行可能较慢。
+- `auto`：优先 Docling，失败后降级到 PyMuPDF。
+
+索引模式：
+
+- `auto`：有索引则跳过解析，没有索引才构建。
+- `skip`：只查询已有索引。
+- `always`：每次都解析 PDF 并写入索引。
+
+## 简历表述
+
+> 基于 LightRAG + Ollama + BGE-M3 构建本地论文 GraphRAG 知识库，实现 PDF 解析、向量/图谱混合检索、Streamlit 问答、MCP/CLI 工具化调用与 GraphML 可视化；在 A10 服务器完成部署验证，成功加载约 1070 个图谱节点、881 条关系和 70 个文本块，支持 CGRA/MLIR 论文问答与图谱邻居查询。

@@ -1,38 +1,30 @@
-# 虚拟环境
+# Environment
+.env
 venv/
 env/
-*.env/
-.env
+.venv/
 
-# 缓存/数据文件
-paper_assistant/index_data/*.json
-
-# Python缓存文件
+# Python cache and build outputs
 __pycache__/
 **/__pycache__/
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
 *.py[cod]
+*.pyo
 *.class
 *.so
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
 
-# 其他临时文件
+# Logs and temporary files
 *.log
 *.swp
+*.tmp
 .DS_Store
+
+# Optional local outputs. Some demo index/html assets are intentionally tracked.
+paper_assistant/index_data/*.lock
+paper_assistant/index_data/*tmp*
+paper_assistant/llm_response_cache.local.json
