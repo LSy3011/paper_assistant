@@ -51,6 +51,35 @@ def parse_pdf_structured(file_path):
     return specialized_parser.parse(file_path)
 
 
+def make_query_param(mode="hybrid"):
+    """Create a LightRAG QueryParam while disabling rerank if the version supports it."""
+    try:
+        return QueryParam(mode=mode, enable_rerank=False)
+    except TypeError:
+        return QueryParam(mode=mode)
+
+
+def fallback_embedding():
+    vector = np.full(EMBEDDING_DIM, 1e-8, dtype=float)
+    vector[0] = 1.0
+    return vector.tolist()
+
+
+def sanitize_embedding(vector):
+    try:
+        array = np.asarray(vector, dtype=float)
+    except (TypeError, ValueError):
+        return fallback_embedding()
+
+    if array.shape[0] != EMBEDDING_DIM:
+        return fallback_embedding()
+
+    array = np.nan_to_num(array, nan=0.0, posinf=0.0, neginf=0.0)
+    if not np.any(array):
+        return fallback_embedding()
+    return array.tolist()
+
+
 async def initialize_lightrag(rag):
     """Initialize LightRAG storage lifecycle for current and older releases."""
     await rag.initialize_storages()
@@ -96,16 +125,20 @@ async def ollama_embedding_func(texts):
 
     embeddings = []
     for text in texts:
+        if not text or not str(text).strip():
+            embeddings.append(fallback_embedding())
+            continue
+
         try:
             response = await asyncio.to_thread(
                 ollama.embeddings,
                 model=EMBEDDING_MODEL_NAME,
                 prompt=text,
             )
-            embeddings.append(response["embedding"])
+            embeddings.append(sanitize_embedding(response["embedding"]))
         except Exception as exc:
-            print(f"Embedding call failed; using zero vector fallback: {exc}")
-            embeddings.append([0.0] * EMBEDDING_DIM)
+            print(f"Embedding call failed; using safe fallback vector: {exc}")
+            embeddings.append(fallback_embedding())
     return np.array(embeddings)
 
 
@@ -168,9 +201,12 @@ async def main():
             print("Existing LightRAG index detected; skipping PDF ingestion.")
             print("Set PAPER_ASSISTANT_INGEST_MODE=always to rebuild, or skip to force query-only mode.")
 
-        query = "Please analyze how these papers improve CGRA compilation efficiency and give the reasoning."
+        query = (
+            "Only based on the indexed papers, analyze how they improve CGRA compilation "
+            "efficiency and give the reasoning."
+        )
         print(f"\nQuery: {query}")
-        result = await rag.aquery(query, param=QueryParam(mode="hybrid"))
+        result = await rag.aquery(query, param=make_query_param("hybrid"))
         print(f"\nAnswer:\n{result}")
     finally:
         if rag is not None:

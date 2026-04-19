@@ -12,6 +12,34 @@ try:
 except Exception:
     initialize_pipeline_status = None
 
+
+def make_query_param(mode="global"):
+    try:
+        return QueryParam(mode=mode, enable_rerank=False)
+    except TypeError:
+        return QueryParam(mode=mode)
+
+
+def fallback_embedding(dim):
+    vector = np.full(dim, 1e-8, dtype=float)
+    vector[0] = 1.0
+    return vector.tolist()
+
+
+def sanitize_embedding(vector, dim):
+    try:
+        array = np.asarray(vector, dtype=float)
+    except (TypeError, ValueError):
+        return fallback_embedding(dim)
+
+    if array.shape[0] != dim:
+        return fallback_embedding(dim)
+
+    array = np.nan_to_num(array, nan=0.0, posinf=0.0, neginf=0.0)
+    if not np.any(array):
+        return fallback_embedding(dim)
+    return array.tolist()
+
 try:
     from .config import (
         CHUNK_TOKEN_SIZE,
@@ -107,12 +135,15 @@ def get_rag_engine():
         if isinstance(texts, str): texts = [texts]
         embeddings = []
         for text in texts:
+            if not text or not str(text).strip():
+                embeddings.append(fallback_embedding(EMBEDDING_DIM))
+                continue
             try:
                 res = await asyncio.to_thread(ollama.embeddings, model=EMBEDDING_MODEL_NAME, prompt=text)
-                embeddings.append(res["embedding"])
+                embeddings.append(sanitize_embedding(res["embedding"], EMBEDDING_DIM))
             except Exception as e:
                 print(f"Embedding Error: {e}")
-                embeddings.append([0.0] * EMBEDDING_DIM)
+                embeddings.append(fallback_embedding(EMBEDDING_DIM))
         return np.array(embeddings)
 
     # 创建实例
@@ -158,7 +189,7 @@ if prompt := st.chat_input("向你的论文知识库提问..."):
             # 使用 asyncio.run 运行查询
             # 注意：Streamlit 内部可能已有 Loop，这里使用 safe_run 策略
             async def run_query():
-                return await rag.aquery(prompt, param=QueryParam(mode="global"))
+                return await rag.aquery(prompt, param=make_query_param("global"))
             
             # 简单的运行方式
             response = asyncio.run(run_query())

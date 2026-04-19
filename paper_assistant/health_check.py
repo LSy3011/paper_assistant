@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import warnings
 from pathlib import Path
 
 import ollama
@@ -39,15 +40,22 @@ def check_torch_cuda():
     if not check_import("torch"):
         return {"torch_installed": False}
     try:
-        import torch
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", category=UserWarning, module="torch.cuda")
+            import torch
+
+            cuda_available = bool(torch.cuda.is_available())
+            device_count = torch.cuda.device_count() if cuda_available else 0
+            device_name = torch.cuda.get_device_name(0) if cuda_available else None
 
         return {
             "torch_installed": True,
-            "cuda_available": bool(torch.cuda.is_available()),
+            "cuda_available": cuda_available,
             "torch_version": torch.__version__,
             "cuda_build": getattr(torch.version, "cuda", None),
-            "device_count": torch.cuda.device_count() if torch.cuda.is_available() else 0,
-            "device_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+            "device_count": device_count,
+            "device_name": device_name,
+            "hint": None if cuda_available else "PyTorch CUDA is unavailable; PDF parsing uses the fast PyMuPDF path by default.",
         }
     except Exception as exc:
         return {

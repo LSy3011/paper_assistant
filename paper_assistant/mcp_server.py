@@ -13,7 +13,7 @@ try:
         PDF_DIR,
         WORKING_DIR,
     )
-    from .main import finalize_lightrag, initialize_lightrag, ollama_embedding_func, ollama_llm_func
+    from .main import finalize_lightrag, initialize_lightrag, make_query_param, ollama_embedding_func, ollama_llm_func
 except ImportError:
     from config import (
         EMBEDDING_DIM,
@@ -21,7 +21,7 @@ except ImportError:
         PDF_DIR,
         WORKING_DIR,
     )
-    from main import finalize_lightrag, initialize_lightrag, ollama_embedding_func, ollama_llm_func
+    from main import finalize_lightrag, initialize_lightrag, make_query_param, ollama_embedding_func, ollama_llm_func
 
 
 def list_papers():
@@ -72,7 +72,7 @@ async def paper_ask(question, mode="hybrid"):
             ),
         )
         await initialize_lightrag(rag)
-        answer = await rag.aquery(question, param=QueryParam(mode=mode))
+        answer = await rag.aquery(question, param=make_query_param(mode))
         return {"question": question, "mode": mode, "answer": answer}
     finally:
         if rag is not None:
