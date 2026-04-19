@@ -29,3 +29,17 @@ MAX_TOKEN_SIZE = int(os.getenv("MAX_TOKEN_SIZE", "8192"))
 CHUNK_TOKEN_SIZE = int(os.getenv("CHUNK_TOKEN_SIZE", "1024"))
 CHUNK_OVERLAP_TOKEN_SIZE = int(os.getenv("CHUNK_OVERLAP_TOKEN_SIZE", "128"))
 LLM_MODEL_MAX_ASYNC = int(os.getenv("LLM_MODEL_MAX_ASYNC", "1"))
+
+# PDF parsing and ingestion controls.
+# PAPER_ASSISTANT_PARSE_BACKEND:
+#   pymupdf  -> fast text extraction, best for demos and server validation
+#   docling  -> high-fidelity layout/table parsing, slower and may download HF models
+#   auto     -> try docling first, then fallback to pymupdf
+PARSER_BACKEND = os.getenv("PAPER_ASSISTANT_PARSE_BACKEND", "pymupdf").strip().lower()
+PARSER_ENABLE_OCR = os.getenv("PAPER_ASSISTANT_ENABLE_OCR", "0").strip().lower() in {"1", "true", "yes"}
+
+# PAPER_ASSISTANT_INGEST_MODE:
+#   auto   -> ingest PDFs only when no existing LightRAG graph is present
+#   always -> parse and ingest PDFs every run
+#   skip   -> never ingest PDFs, only query the existing index
+INGEST_MODE = os.getenv("PAPER_ASSISTANT_INGEST_MODE", "auto").strip().lower()

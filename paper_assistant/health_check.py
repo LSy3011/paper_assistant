@@ -5,9 +5,9 @@ from pathlib import Path
 import ollama
 
 try:
-    from .config import EMBEDDING_MODEL_NAME, LLM_MODEL_NAME, PDF_DIR, WORKING_DIR
+    from .config import EMBEDDING_MODEL_NAME, INGEST_MODE, LLM_MODEL_NAME, PARSER_BACKEND, PDF_DIR, WORKING_DIR
 except ImportError:
-    from config import EMBEDDING_MODEL_NAME, LLM_MODEL_NAME, PDF_DIR, WORKING_DIR
+    from config import EMBEDDING_MODEL_NAME, INGEST_MODE, LLM_MODEL_NAME, PARSER_BACKEND, PDF_DIR, WORKING_DIR
 
 
 def check_import(module_name):
@@ -35,6 +35,29 @@ def check_ollama_models():
         return {"ok": False, "error": str(exc)}
 
 
+def check_torch_cuda():
+    if not check_import("torch"):
+        return {"torch_installed": False}
+    try:
+        import torch
+
+        return {
+            "torch_installed": True,
+            "cuda_available": bool(torch.cuda.is_available()),
+            "torch_version": torch.__version__,
+            "cuda_build": getattr(torch.version, "cuda", None),
+            "device_count": torch.cuda.device_count() if torch.cuda.is_available() else 0,
+            "device_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+        }
+    except Exception as exc:
+        return {
+            "torch_installed": True,
+            "cuda_available": False,
+            "error": str(exc),
+            "hint": "Docling/RapidOCR will use CPU when PyTorch CUDA cannot initialize.",
+        }
+
+
 def main():
     checks = {
         "paths": {
@@ -45,6 +68,10 @@ def main():
             "working_dir_exists": WORKING_DIR.exists(),
             "graph_exists": (WORKING_DIR / "graph_chunk_entity_relation.graphml").exists(),
         },
+        "config": {
+            "parser_backend": PARSER_BACKEND,
+            "ingest_mode": INGEST_MODE,
+        },
         "imports": {
             "lightrag": check_import("lightrag"),
             "docling": check_import("docling"),
@@ -52,6 +79,7 @@ def main():
             "streamlit": check_import("streamlit"),
             "dotenv": check_import("dotenv"),
         },
+        "torch_cuda": check_torch_cuda(),
         "ollama": check_ollama_models(),
     }
     print(json.dumps(checks, ensure_ascii=False, indent=2))
