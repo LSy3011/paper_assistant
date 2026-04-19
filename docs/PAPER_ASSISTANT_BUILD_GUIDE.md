@@ -60,6 +60,37 @@ paper_assistant/mcp_server.py        # 可选：将论文知识库暴露为 MCP 
 
 建议在服务器上使用 Python 3.11 或 3.12，优先 Python 3.11。
 
+### 4.1 DSW 服务器现有环境
+
+你当前服务器上已经有 Paper Assistant 的独立虚拟环境，可以直接复用：
+
+```bash
+cd /mnt/workspace/paper_assistant/paper_assistant/
+source venv/bin/activate
+```
+
+如果仓库代码在该目录下的 `paper_assistant/` 子目录中，运行入口可以这样执行：
+
+```bash
+cd /mnt/workspace/paper_assistant/paper_assistant/
+source venv/bin/activate
+cd paper_assistant
+python main.py
+```
+
+如果你重新拉取后的目录结构是仓库根目录直接包含 `paper_assistant/` 包目录，更推荐在仓库根目录运行：
+
+```bash
+cd /mnt/workspace/paper_assistant/paper_assistant/
+source venv/bin/activate
+python paper_assistant/health_check.py
+python paper_assistant/main.py
+```
+
+关键原则：先激活 Paper Assistant 的 `venv`，再从仓库根目录执行 `python paper_assistant/...`，这样 `.env`、`pdfs/` 和 `index_data/` 路径最稳定。
+
+### 4.2 通用新环境
+
 ```bash
 cd /path/to/paper_assistant_backup
 python -m venv .venv
